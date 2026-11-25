@@ -224,7 +224,7 @@ function main(argv) {
   const parts = discover(root).map((file) => loadPart(file, root));
   if (!parts.length) return fail(`no library parts under ${root} (expected library/ or .opencode/)`);
   parts.sort((a, b) => (a.id > b.id) - (a.id < b.id));
-  const duplicate = parts.find((part, index) => index > 0 && parts[index - 1].id === part.id);
+  const duplicate = parts.find((part, index) => index > 0 && parts[index - 1].id === part.id && parts[index - 1].kind === part.kind);
   if (duplicate) return fail(`duplicate part id: ${duplicate.id}`);
   const model = buildModel(parts);
   const file = args.fixtures ? resolve(args.fixtures) : join(root, 'evals', 'trigger-fixtures.json');

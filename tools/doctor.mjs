@@ -108,7 +108,6 @@ function scanText(add, root, file) {
     }
   }
 }
-
 function checkLock(add, root) {
   const loaded = loadJson(add, root, 'agent.lock.json', 'lock');
   if (loaded.missing) { add('error', 'lock', null, 0, 'agent.lock.json not found; CLI01 writes it'); return null; }
@@ -206,7 +205,6 @@ function checkProject(add, root) {
   }
   else if (recipe.some((step) => typeof step !== 'string' && (typeof step !== 'object' || step === null))) add('warn', 'config', 'project.config.json', 0, 'verify recipe step is neither a string nor an object');
 }
-
 function build(root) {
   const items = [];
   const add = (level, check, file, line, message) => items.push({ level, check, file, line, message });
@@ -234,7 +232,6 @@ function render(report, strict) {
   out.push(failed ? `result: ${report.errors.length} error(s), ${report.warnings.length} warning(s)` : `result: healthy (${report.warnings.length} warning(s))`);
   return out.join('\n');
 }
-
 function main(argv) {
   const args = parseArgs(argv);
   if (args.error) { console.error(`doctor: ${args.error}\nTry --help.`); return 2; }
@@ -250,5 +247,4 @@ function main(argv) {
   } else console.log(render(report, args.strict));
   return failed ? 1 : 0;
 }
-
 process.exitCode = main(process.argv.slice(2));

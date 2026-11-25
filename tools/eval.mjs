@@ -235,9 +235,10 @@ function main(argv) {
     total: results.length, pass: count('pass'), fail: count('fail'),
     skipManual: count('skip-manual'), missingFixture: count('missing-fixture'),
   };
-  const report = { schema: 1, ok: summary.fail === 0, root, evalsDir, cases: results, summary };
+  const report = { schema: 1, ok: summary.fail === 0 && summary.missingFixture === 0, root, evalsDir, cases: results, summary };
   console.log(args.json ? JSON.stringify(report) : renderRun(report));
-  return summary.fail === 0 ? 0 : 1;
+  if (summary.missingFixture > 0) console.error(`eval: ${summary.missingFixture} case(s) have no runnable fixture; this run is not evidence`);
+  return report.ok ? 0 : 1;
 }
 
 try {

@@ -26,7 +26,7 @@ function usage() {
 Usage: node tools/new-project.mjs <target-dir> --name "Game Name" [options]
 Options:
   --name <text>    game name; required, 1-80 chars, no control characters
-  --packs <list>   comma-separated; default core (always installed); core, game
+  --packs <list>   comma-separated; default core,game (core is always installed)
   --git            run "git init" after writing (off by default)
   -h, --help       show this help
 The target must not exist or must be empty. Nothing is overwritten.
@@ -34,7 +34,7 @@ Exit codes: 0 success, 1 failure, 2 usage error.`);
 }
 
 function parseArgs(argv) {
-  const out = { packs: 'core', git: false, help: false };
+  const out = { packs: 'core,game', git: false, help: false };
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i];
     if (arg === '--help' || arg === '-h') out.help = true;
@@ -223,7 +223,13 @@ function main() {
   const ctx = { root, build, name, version, ids: blueprintIds(root), parts: [], seen: new Set() };
   try {
     copyTree(join(root, 'template'), build, name);
+    mkdirSync(join(build, 'tools'), { recursive: true });
+    for (const tool of ['verify.mjs', 'status.mjs']) copyTree(join(root, 'tools', tool), join(build, 'tools', tool), name);
     for (const pack of packs) installPack(pack, ctx);
+    if (existsSync(join(root, 'evals', 'trigger-fixtures.json'))) {
+      mkdirSync(join(build, 'evals'), { recursive: true });
+      copyTree(join(root, 'evals', 'trigger-fixtures.json'), join(build, 'evals', 'trigger-fixtures.json'), name);
+    }
     ctx.parts.sort((a, b) => KIND_ORDER[a.kind] - KIND_ORDER[b.kind] || a.id.localeCompare(b.id, 'en', { numeric: true }));
     writeManifests(ctx);
     if (existsSync(target)) rmdirSync(target);

@@ -97,7 +97,7 @@ function inlineValue(lines, aliases) {
 }
 
 function values(lines) {
-  return lines.map(clean).filter((value) => value && !/^(none|n\/a)\.?$/i.test(value) && !/^[-*+]$/.test(value));
+  return lines.map(clean).filter((value) => value && !/^(none|n\/a)\.?$/i.test(value) && !/^[-*+]$/.test(value) && !/^\[.*\]$/.test(value));
 }
 
 function parseState(body) {
@@ -161,9 +161,7 @@ function parseConfig(raw) {
   const engine = data.engine;
   const engineText = typeof engine === 'string' ? engine
     : engine && typeof engine === 'object' ? [engine.name, engine.version || engine.range].map(text).filter(Boolean).join(' ') : '';
-  const verify = data.verify == null ? false
-    : Array.isArray(data.verify) ? data.verify.length > 0
-      : typeof data.verify === 'object' ? Object.keys(data.verify).length > 0 : Boolean(data.verify);
+  const verify = data.verify && Array.isArray(data.verify.recipe) ? data.verify.recipe.length > 0 : false;
   return {
     status: 'ok',
     name: text(data.name || (data.project && data.project.name)),

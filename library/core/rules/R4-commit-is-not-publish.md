@@ -55,8 +55,8 @@ G3 reads it.
 
 ## Enforcement
 
-The project `opencode.json` denies `git push *` and `gh release create *`; this
-template ships it as `template/opencode.json`. Keep it: the agent cannot publish,
+The project `opencode.json` denies `git push *` and `gh release create *`; the
+framework ships the same rule in its template. Keep it: the agent cannot publish,
 even by accident. A publish the user wants, the user runs; the exception is per
 command, never a widened rule.
 

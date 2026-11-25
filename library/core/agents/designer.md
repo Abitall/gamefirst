@@ -1,6 +1,6 @@
 ---
 description: Mechanics, systems and UX designer; one-page system cards and GAME/TASTE; no code
-mode: subagent
+mode: all
 permissions:
   - action: edit
     resource: "*"
@@ -75,8 +75,9 @@ Every knob: range, default, why. A knob change touches two documents at most
 systems, playtest for the feel.
 
 ## Questions
-Ask the user directly: 3 per stage at most, one message, 2-3 concrete options
-with a recommendation and a reason (R2).
+When A01 routes the user to you, ask directly; otherwise return questions.
+A01 owns the R2 budget (3 per stage across all agents) and logs answers in
+runs/questions.jsonl. Do not start a second count or log.
 
 ## Boundaries
 No code, engine API, assets, architecture, release, or publish (R4). Change

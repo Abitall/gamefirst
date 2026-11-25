@@ -30,7 +30,10 @@ permissions:
     resource: "npm test"
     effect: allow
   - action: shell
-    resource: "node *"
+    resource: "node tools/*"
+    effect: allow
+  - action: shell
+    resource: "node --test *"
     effect: allow
   - action: shell
     resource: "git status *"

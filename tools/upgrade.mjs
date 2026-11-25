@@ -1,11 +1,9 @@
 #!/usr/bin/env node
-// upgrade - dry-run, diff, and apply a gamefirst framework upgrade.
-// Reads <game>/agent.lock.json and the bundled VERSION; parts come from
-// library/. Writes only on --apply, atomically. No network, git, or publish.
+// upgrade - dry-run, diff, and apply a framework upgrade; reads the game lock, writes only on --apply.
+import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readFileSync, readdirSync, renameSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, isAbsolute, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-
 const SEMVER = /^(\d+)\.(\d+)\.(\d+)(?:-([0-9A-Za-z.-]+))?$/;
 const HERE = dirname(fileURLToPath(import.meta.url));
 const SOURCES = [
@@ -111,6 +109,7 @@ function libraryIndex(root, ids) {
 }
 
 const lineCount = (text) => (text ? text.replace(/\n$/, '').split('\n').length : 0);
+const textHash = (text) => createHash('sha256').update(text).digest('hex');
 
 function lineDelta(oldText, newText) {
   const counts = (text) => {
@@ -138,7 +137,7 @@ function planUpgrade(gameDir, lock, index) {
     if (!existsSync(file)) return row('missing', { added: lineCount(newText), source: entry.file, file });
     const oldText = readText(file);
     if (oldText === newText) return row('same', { source: entry.file, file });
-    return row('changed', { ...lineDelta(oldText, newText), source: entry.file, file });
+    return row('changed', { ...lineDelta(oldText, newText), source: entry.file, file, localEdit: Boolean(part.hash) && textHash(oldText) !== part.hash });
   });
 }
 
@@ -166,7 +165,8 @@ function atomicWrite(target, text) {
   catch (error) { try { rmSync(temp, { force: true }); } catch { /* best effort */ } throw error; }
 }
 
-function applyUpgrade(gameDir, lock, rows, from, to) {
+function applyUpgrade(gameDir, lock, rows, from, to, force) {
+  if (!force && rows.some((row) => row.status === 'changed' && row.localEdit)) fail('local edits in changed parts; pass --force to overwrite', 2);
   let files = 0;
   for (const row of rows) if (row.status === 'changed' || row.status === 'missing') { atomicWrite(row.file, readText(row.source)); files += 1; }
   const rowsById = new Map(rows.map((row) => [row.id, row]));
@@ -216,7 +216,7 @@ function main(argv) {
   const summary = { total: rows.length, same: 0, changed: 0, missing: 0, removed: 0, files: 0 };
   for (const row of rows) { summary[row.status] += 1; if (row.status === 'changed' || row.status === 'missing') summary.files += 1; }
   const forced = order > 0;
-  const applied = args.apply ? applyUpgrade(gameDir, lock, rows, from, to) : { files: 0, note: null };
+  const applied = args.apply ? applyUpgrade(gameDir, lock, rows, from, to, args.force) : { files: 0, note: null };
 
   if (args.json) {
     const parts = rows.map((row) => ({ id: row.id, kind: row.kind, path: row.path, status: row.status, added: row.added, removed: row.removed }));

@@ -4,7 +4,6 @@
  * Usage: node tools/verify.mjs [game-dir] [--claim <slug>] [--timeout <seconds>] [--json] [--no-evidence]
  * It never fixes a failure, never edits a check and never weakens one (S02, E03).
  */
-
 import { spawnSync } from 'node:child_process';
 import { appendFileSync, existsSync, mkdirSync, readFileSync, renameSync, statSync, writeFileSync } from 'node:fs';
 import { delimiter, isAbsolute, join, relative, resolve, sep } from 'node:path';
@@ -13,7 +12,6 @@ const DEFAULT_TIMEOUT = 300;
 const MAX_TIMEOUT = 86400; // a check longer than a day is a watch mode, not a check
 const BLOCKED = /(?:^|[\s;&|])(?:git\s+push|npm\s+publish|gh\s+release\s+create|rm\s+-rf\s+\/)(?=\s|;|&|\||$)/i;
 const posix = (path) => path.split(sep).join('/');
-
 const USAGE = `gamefirst verify - run the project's verify recipe
 
 Usage: node tools/verify.mjs [game-dir] [--claim <slug>] [--timeout <sec>] [--json] [--no-evidence]
@@ -228,6 +226,10 @@ function main(argv) {
   if (!isDir(root)) { console.error(`verify: game directory not found: ${root}`); return 2; }
   const loaded = loadRecipe(root);
   if (loaded.error) return stop(args, root, loaded.error);
+  if (loaded.empty) {
+    console.error(`verify: ${loaded.empty}`);
+    return 1;
+  }
   let base = null;
   if (args.evidence) {
     try { base = makeEvidence(root, args.claim); } catch (error) {
@@ -235,7 +237,6 @@ function main(argv) {
     }
   } else console.error('verify: --no-evidence: this run is not evidence and cannot support a done claim (R1, E03)');
   const report = runAll(loaded.checks || [], root, args.timeout, base, args.claim);
-  if (loaded.empty) report.errors.push(loaded.empty);
   if (base) {
     try { writeAtomic(join(base, 'REPORT.md'), renderReport(report)); } catch (error) {
       return stop(args, root, `cannot write REPORT.md: ${error.message}`);

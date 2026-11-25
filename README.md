@@ -2,8 +2,8 @@
 
 A playable-first game development framework for a solo developer.
 
-gamefirst is deliberately small: ten rules, four agents, thirteen skills, five
-gates, twelve evals, ten tools, and six commands. It is not a studio org chart
+gamefirst is deliberately small: ten rules, four agents, thirteen skills, three
+gates plus two checkpoints, twelve eval specs, ten tools, and six commands. It is not a studio org chart
 and it does not ask for a fifty-page GDD before the first build. A mechanic is
 designed only as far as the next playable test; documentation describes what
 already works, never what might.
@@ -38,7 +38,7 @@ gamefirst/
 ├── library/
 │   ├── core/        # 10 rules, 4 agents, 13 skills, evals, memory, autonomy
 │   ├── game/        # crews and gates for the game pipeline
-│   ├── engines/     # N00 contract, phaser/ (stable), unity/ and godot/ (beta)
+│   ├── engines/     # N00 contract, phaser/unity/godot packs (beta, docs+recipes)
 │   └── packs/       # release, obsidian, art, audio, narrative, localization, marketing
 ├── tools/           # new-project, status, verify, eval, sync, upgrade, doctor, lint, trigger, capture
 ├── docs/            # blueprint, build plan, review rubric, session log
@@ -124,7 +124,7 @@ The first useful milestone is a playable core loop, not a document. Use
 
 `library/engines/` holds the engine contract and three engine packs:
 
-- `phaser/` — stable, pinned to Phaser 4.2.1;
+- `phaser/` - beta docs and recipes, pinned to Phaser 4.2.1; no starter project yet;
 - `unity/` — beta, Unity 6000 LTS;
 - `godot/` — beta, Godot 4.x.
 
@@ -133,10 +133,15 @@ The first useful milestone is a playable core loop, not a document. Use
 material: a pack has a `PACK.md`, an eight-key `manifest.json`, a template, and
 an offline `selftest.mjs`.
 
-In v0.3, `new-project` installs `core` and `game` only. Engine and domain packs
-are not auto-installed yet; `--packs` rejects them explicitly. Copy the pack you
-need into the game, or wait for the v0.4 installer. Do not pretend a pack is
-loaded when it is only present in the library.
+In v0.3, `new-project` installs `core` and `game` only; the default is now
+`core,game`, so the game pipeline is present. Engine and domain packs are not
+auto-installed yet; `--packs` rejects them explicitly. Copy the pack you need
+into the game, or wait for the v0.4 installer. Do not pretend a pack is loaded
+when it is only present in the library.
+
+`evals/` ships eval specs, not fixtures. `eval.mjs` exits non-zero when no
+fixture is runnable; a green run means checks actually ran. The same is true for
+`/verify`: an empty `verify.recipe` is a FAIL, not a pass.
 
 ## Updating a game
 
@@ -148,7 +153,9 @@ node tools/doctor.mjs ../my-game --strict
 ```
 
 `upgrade` writes `docs/UPGRADE-<from>-to-<to>.md`; `doctor` is read-only and
-returns a non-zero exit on errors.
+returns a non-zero exit on errors. In v0.3 `upgrade --apply` overwrites changed
+parts without a three-way merge: commit or back up a game before applying it,
+especially if you edited rules or skills by hand.
 
 ## Tests
 
