@@ -67,11 +67,11 @@ eighty more parts.
 | 10 | E12 | release safety | `library/core/evals/E12-release-safety.md` | accepted |
 | 10 | CLI01 | new-project | `tools/new-project.mjs` | accepted |
 | 10 | CLI02 | status | `tools/status.mjs` | accepted |
-| 11 | CLI03 | verify | `tools/verify.mjs` | pending |
-| 11 | CLI04 | eval | `tools/eval.mjs` | pending |
-| 11 | CLI05 | sync-agent | `tools/sync-agent.mjs` | pending |
-| 11 | CLI06 | upgrade | `tools/upgrade.mjs` | pending |
-| 11 | CLI07 | doctor | `tools/doctor.mjs` | pending |
+| 11 | CLI03 | verify | `tools/verify.mjs` | running |
+| 11 | CLI04 | eval | `tools/eval.mjs` | running |
+| 11 | CLI05 | sync-agent | `tools/sync-agent.mjs` | running |
+| 11 | CLI06 | upgrade | `tools/upgrade.mjs` | running |
+| 11 | CLI07 | doctor | `tools/doctor.mjs` | running |
 | 12 | CLI08 | lint-agent-context | `tools/lint-agent-context.mjs` | pending |
 | 12 | CLI09 | trigger-check | `tools/trigger-check.mjs` | pending |
 | 12 | CLI10 | capture | `tools/capture.mjs` | pending |
