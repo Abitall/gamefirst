@@ -12,6 +12,7 @@ import { fileURLToPath } from 'node:url';
 const HERE = dirname(fileURLToPath(import.meta.url));
 const MANIFEST = 'manifest.json';
 const CHAR_CAP = 6000;
+const TOKEN_CAP = 1500;
 const TEMPLATE_CAP = 4000;
 const LINE_CAP = 250;
 const KEYS = ['files', 'hashes', 'id', 'loaded', 'requires', 'selftest', 'upgrade', 'version'];
@@ -136,6 +137,8 @@ function checkEncoding(dir, m) {
 function checkCaps(m) {
   const pack = read(join(HERE, 'PACK.md'));
   need(pack.length <= CHAR_CAP, `PACK.md ${pack.length} > ${CHAR_CAP}`);
+  need(Math.ceil(pack.length / 4) <= TOKEN_CAP,
+    `PACK.md ${Math.ceil(pack.length / 4)} > ${TOKEN_CAP} tokens`);
   for (const file of m.files.filter((f) => f.startsWith('templates/') && f.endsWith('.md'))) {
     const size = read(join(HERE, file)).length;
     need(size <= TEMPLATE_CAP, `${file} ${size} > ${TEMPLATE_CAP}`);

@@ -15,13 +15,13 @@ negative mutations.
 |---|---|---|---|---|---|---|
 | `PACK.md` | 5,948 | 5,948 | 139 | 1,487 | 6,000 chars / 1,500 tokens | PASS |
 | `manifest.json` | 517 | 517 | 15 | 129 | exactly 8 keys | PASS |
-| `selftest.mjs` | 8,674 | 8,674 | 236 | 2,169 | 250 lines | PASS |
+| `selftest.mjs` | 8,814 | 8,814 | 239 | 2,204 | 250 lines | PASS |
 | `templates/audio-brief.md` | 1,932 | 1,932 | 50 | 483 | 4,000 chars | PASS |
 | `JUSTIFICATION.md` | 6,631 | 6,631 | 91 | 1,658 | no cap | PASS |
 | `SOURCES.md` | 7,914 | 7,914 | 181 | 1,979 | 9 sources, 4/3/2 | PASS |
 | `REPORT.md` | 4,460 | 4,460 | 96 | 1,115 | no cap | PASS |
 
-The audio payload is 17,071 bytes across the four artifact files. `PACK.md` sits
+The audio payload is 17,211 bytes across the four artifact files. `PACK.md` sits
 52 characters under the hard cap, so any edit needs a fresh self-test.
 
 ## Checks

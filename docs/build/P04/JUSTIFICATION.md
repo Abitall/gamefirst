@@ -25,7 +25,7 @@ reference those skills can point to.
 | Holds | Names the blockers that stop work. | Agents paper over missing licenses, twins, or budget. | No; seven stop conditions. | G2.5, G3; P01 shape |
 | Cross-refs | Points to the owning skills, gates, rules, and packs. | The pack duplicates or contradicts them. | No; ids replace restatement. | Priority order; N00/N01 |
 | `manifest.json` | Eight-key contract: identity, deps, files, hashes, command, upgrade. | The pack cannot be listed or verified. | No; exact schema is the contract. | Release manifest; P02-P07 contract |
-| `selftest.mjs` | Offline proof of packaging, encoding, caps, sections, and mutations. | "Stable" is an opinion; bad copies pass review. | No; 236 lines, four negative cases. | Release selftest; P01 |
+| `selftest.mjs` | Offline proof of packaging, encoding, caps, sections, and mutations. | "Stable" is an opinion; bad copies pass review. | No; 239 lines, four negative cases. | Release selftest; P01 |
 | `templates/audio-brief.md` | One page to record pillars, cues, targets, licenses, review. | Every project invents a different brief. | No; slots, not prose. | P03 template pattern |
 | `JUSTIFICATION.md` | Explains why each unit exists and what its removal costs. | Reviewers cannot challenge scope with evidence. | No; table is the argument. | P01 justification |
 | `SOURCES.md` | Nine checked sources, counts, licenses, borrow/reject, dead ends. | Claims lose provenance; stars and licenses become hearsay. | No; exactly 9, 4/3/2. | Staging README |
@@ -76,7 +76,7 @@ skill's flow. Project docs are lower in the priority order and are not validated
 |---|---|---|---|
 | `PACK.md` | 5,948 | 139 | 1,487 |
 | `manifest.json` | 517 | 15 | 129 |
-| `selftest.mjs` | 8,674 | 236 | 2,169 |
+| `selftest.mjs` | 8,814 | 239 | 2,204 |
 | `templates/audio-brief.md` | 1,932 | 50 | 483 |
 | `JUSTIFICATION.md` | measured in REPORT | - | - |
 | `SOURCES.md` | measured in REPORT | - | - |
