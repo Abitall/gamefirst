@@ -42,11 +42,11 @@ eighty more parts.
 | 5 | S07 | engine-choice | `library/game/skills/engine-choice/SKILL.md` | accepted |
 | 5 | S08 | prototype | `library/game/skills/prototype/SKILL.md` | accepted |
 | 5 | S09 | gym | `library/game/skills/gym/SKILL.md` | accepted |
-| 6 | S10 | slice | `library/game/skills/slice/SKILL.md` | pending |
-| 6 | S11 | content | `library/game/skills/content/SKILL.md` | pending |
-| 6 | S12 | polish | `library/game/skills/polish/SKILL.md` | pending |
-| 6 | S13 | release | `library/game/skills/release/SKILL.md` | pending |
-| 6 | C01 | prototype-crew | `library/game/crews/prototype-crew.md` | pending |
+| 6 | S10 | slice | `library/game/skills/slice/SKILL.md` | accepted |
+| 6 | S11 | content | `library/game/skills/content/SKILL.md` | accepted |
+| 6 | S12 | polish | `library/game/skills/polish/SKILL.md` | accepted |
+| 6 | S13 | release | `library/game/skills/release/SKILL.md` | accepted |
+| 6 | C01 | prototype-crew | `library/game/crews/prototype-crew.md` | accepted |
 | 7 | C02 | slice-crew | `library/game/crews/slice-crew.md` | pending |
 | 7 | C03 | release-crew | `library/game/crews/release-crew.md` | pending |
 | 7 | G0 | concept brief | `library/game/gates/G0-concept-brief.md` | pending |
@@ -122,7 +122,7 @@ are ignored build outputs; `dist-play/` is the local playtest build.
 
 ## Current focus
 
-Batch 5 is assembled and the smoke test passes (179 checks, 0 failures).
-Batch 6: S10 slice, S11 content, S12 polish, S13 release, C01 prototype-crew.
-Do not start Batch 6 until Batch 5 is committed and the four agents plus nine
-skills load together in a disposable game.
+Batch 6 is assembled and the smoke test passes (`225 checks`, 0 failures):
+S10 slice, S11 content, S12 polish, S13 release, C01 prototype-crew. Batch 7 is
+next: C02 slice-crew, C03 release-crew, G0 concept brief, G1 fun, G2 slice. Do
+not start Batch 7 until Batch 6 is committed.
