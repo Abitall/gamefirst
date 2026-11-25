@@ -1,0 +1,14 @@
+{
+  "id": "pack-marketing",
+  "version": "0.1.0",
+  "requires": ["core", "game"],
+  "loaded": "on-demand",
+  "files": ["PACK.md", "selftest.mjs", "templates/press-kit.md"],
+  "hashes": {
+    "PACK.md": "d44c2dd96d3dda62fba0ee703d6ca11eb55e16ceb0a305fff4500c480c9cbbf0",
+    "selftest.mjs": "9ce3576fc77f2caece45bc6abb1de7cdb87ac71b4e1ba7586e923f8e0df9fbb0",
+    "templates/press-kit.md": "bf48df2c1b767b4447f60fdd4e1498123e69c5b66dfd421317a4bd894328074a"
+  },
+  "selftest": "node selftest.mjs",
+  "upgrade": "none"
+}
