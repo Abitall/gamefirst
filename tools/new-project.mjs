@@ -190,7 +190,7 @@ function writeJson(path, data) { writeFileSync(path, `${JSON.stringify(data, nul
 
 function writeManifests(ctx) {
   writeJson(join(ctx.build, 'project.config.json'), {
-    name: ctx.name, engine: null, verify: { recipe: [] }, budgets: {},
+    name: ctx.name, engine: null, packs: {}, verify: { recipe: [] }, budgets: {}, default_agent: 'partner',
   });
   writeJson(join(ctx.build, 'agent.lock.json'), {
     version: GAME_VERSION, core: ctx.version, parts: ctx.parts, created: new Date().toISOString(),

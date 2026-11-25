@@ -21,7 +21,7 @@ Everything is under `staging/CLI01/`; nothing was committed.
 
 | Item | Lines | Characters | chars/4 | Threshold |
 |---|---:|---:|---:|---|
-| `new-project.mjs` | 250 | 11,317 | 2,829.25 | ≤ 250 lines |
+| `new-project.mjs` | 250 | 11,354 | 2,838.50 | ≤ 250 lines |
 | `test/run-checks.mjs` | 166 | 10,750 | 2,687.5 | not shipped |
 
 The artifact is exactly at the 250-line target; no size exception is requested.
@@ -34,7 +34,7 @@ Run from `C:\Phaser Projects\gamefirst`:
 | Check | Command | Result |
 |---|---|---|
 | Help | `node staging/CLI01/artifact/tools/new-project.mjs --help` | exit 0, synopsis and options |
-| Black-box suite | `node staging/CLI01/test/run-checks.mjs` | 53/53 passed, exit 0 |
+| Black-box suite | `node staging/CLI01/test/run-checks.mjs` | 55/55 passed, exit 0 |
 | Non-empty refusal | suite | exit 1, existing file preserved, no project written |
 | Core install | suite | 31 parts: `.opencode/rules` (10), `.opencode/agents` (4), `.opencode/skills` (5), `evals/` (12) |
 | `core,game` install | suite | 47 parts (31 core + 16 game: 8 skills, 3 crews, 5 gates); `S06`, `C01`, `G0` present |
@@ -82,13 +82,13 @@ it for inspection. A manual `core,game` sample produced 47 parts and printed
 | # | Section | Verdict | Notes |
 |---:|---|---|---|
 | 1 | Necessity | accept | Blueprint CLI01 and BUILD-PLAN batch 10; without it the template's `.opencode/rules/*.md` reference is dead. |
-| 2 | Function | accept | All required behaviors are implemented, including game crews/gates, and covered by the 53-check suite. |
+| 2 | Function | accept | All required behaviors are implemented, including game crews/gates, and covered by the 55-check suite. |
 | 3 | Evidence | accept | Nine sources: 4 gamedev / 3 SWE / 2 AI, exact 2026-11-25 stars, licenses, quotes, borrow/reject, dead ends. |
 | 4 | Fit | accept | Node 18+ ESM, no dependencies, staged path resolution, S05 exit codes, no engine imports. |
 | 5 | Size | accept | Exactly 250 lines, at the target; the test harness is separate. |
 | 6 | Language/encoding | accept | UTF-8 without BOM, LF, POSIX paths in the lockfile; verified on 74 files. |
 | 7 | Security | accept | No overwrite, non-empty guard, symlink rejection, containment checks, name validation, no network or secrets. |
-| 8 | Testability | accept | Black-box suite on a temp directory, 53 assertions, library-derived counts, cleanup and `KEEP=1` inspection. |
+| 8 | Testability | accept | Black-box suite on a temp directory, 55 assertions, library-derived counts, cleanup and `KEEP=1` inspection. |
 | 9 | Integration | accept | Reads `VERSION`, blueprint IDs, `template/`, `library/`; writes the lock and config expected by CLI02/N00. Open questions above cover the remaining contract gaps. |
 
 Overall self-assessment: **accept**. External review has not run yet.

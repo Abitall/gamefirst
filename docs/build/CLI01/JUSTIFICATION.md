@@ -1,7 +1,7 @@
 # CLI01 justification — `new-project`
 
 Artifact: `staging/CLI01/artifact/tools/new-project.mjs`
-Measured: 250 lines, 11,317 characters (chars/4 = 2,829.25).
+Measured: 250 lines, 11,354 characters (chars/4 = 2,838.50).
 Target: Node 18+ ESM, no dependencies, Windows and POSIX.
 
 The tool creates one game repository from `template/` plus selected packs. It

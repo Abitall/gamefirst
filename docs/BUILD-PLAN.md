@@ -92,11 +92,11 @@ eighty more parts.
 | 15 | D09 | guide/ | `template/docs/guide/README.md` | accepted |
 | 15 | D10 | decisions.ru.md | `template/decisions.ru.md` | accepted |
 | 15 | M01 | memory schema | `library/core/memory/MEMORY-SCHEMA.md` | accepted |
-| 16 | X01 | autonomy contract | `library/core/autonomy/CONTRACT.md` | running |
-| 16 | X02 | security | `library/core/security/SECURITY.md` | running |
-| 16 | X03 | versioning | `library/core/versioning/VERSIONING.md` | running |
-| 16 | N00 | engine contract | `library/engines/CONTRACT.md` | running |
-| 16 | N01 | engine-phaser | `library/engines/phaser/` | running |
+| 16 | X01 | autonomy contract | `library/core/autonomy/CONTRACT.md` | accepted |
+| 16 | X02 | security | `library/core/security/SECURITY.md` | accepted |
+| 16 | X03 | versioning | `library/core/versioning/VERSIONING.md` | accepted |
+| 16 | N00 | engine contract | `library/engines/CONTRACT.md` | accepted |
+| 16 | N01 | engine-phaser | `library/engines/phaser/` | accepted |
 | 17 | N02 | engine-unity | `library/engines/unity/` | pending |
 | 17 | N03 | engine-godot | `library/engines/godot/` | pending |
 | 17 | P01 | release pack | `library/packs/release/` | pending |
@@ -161,5 +161,5 @@ Batch 14 is committed (`311e4a1`) and the smoke test passes (`407 checks`, 0
 failures): D02 `STATE.md`, D03 `DECISIONS.md`, D04 `GAME.md`+`TASTE.md`, D05
 `BACKLOG.md`, D06 `SYSTEM-CARD.md`. Batch 15 is accepted: D07 playtest note,
 D08 engine doc, D09 guide, D10 Russian decisions digest, M01 memory schema.
-Current focus: Batch 16, X01 autonomy contract, X02 security, X03 versioning,
-N00 engine contract, N01 Phaser pack.
+Batch 16 is accepted: X01 autonomy contract, X02 security, X03 versioning, N00 engine contract, N01 Phaser pack.
+Current focus: Batch 17, N02 Unity pack, N03 Godot pack, packs.

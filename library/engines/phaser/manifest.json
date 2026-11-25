@@ -1,0 +1,24 @@
+{
+  "id": "engine-phaser",
+  "engine": "phaser",
+  "engineRange": "4.2.1",
+  "version": "0.1.0",
+  "stability": "beta",
+  "parts": ["docs", "recipe"],
+  "files": ["RULES.md", "API.md", "PITFALLS.md", "RECIPES.md", "selftest.mjs"],
+  "hashes": {
+    "RULES.md": "d50a68f596ef84f4e39f440e487b8a5c65ba188aa7e2ea4754863e60e5a3f9c8",
+    "API.md": "2a15b03a7875be0cb856e71f13b927037a479d69f0b16042f5999c31fe6d85a0",
+    "PITFALLS.md": "025c89daacc7657a93ae309aa878965463349fee52fe17662cc81960f689ba2e",
+    "RECIPES.md": "e8cb75f78cd61ac05d8d6f65e2029d4f8c2ea40a07910c2df3cc7bd541408fff",
+    "selftest.mjs": "a0f0a4bf3d21f9b4517f9f50d1618065c1d06fd6dcbe5f01b19cc7ae38b7822a"
+  },
+  "selftest": "node selftest.mjs",
+  "upgrade": "none",
+  "apiSource": {
+    "kind": "typings",
+    "uri": "https://docs.phaser.io/api-documentation/api-documentation",
+    "version": "4.2.1",
+    "date": "2026-11-25"
+  }
+}

@@ -80,8 +80,8 @@ Review loop: up to 3 rounds per part. A part is accepted only after it passes
 | D09 | producer | ses_deb9258e2ffeXACL8wSxcK4owX | accepted 2026-11-25 |
 | D10 | producer | ses_deb9258e1ffe4jitIiEDoYTenF | accepted 2026-11-25 |
 | M01 | technical-director | ses_deb9258e0ffeznwO2rpCFEgQvN | accepted 2026-11-25 |
-| X01 | technical-director | ses_deb80e328ffeqtkSIjOQrU7aAK | running |
-| X02 | security-engineer | ses_deb80e327ffeFP6W2W288yIUue | running |
-| X03 | devops-engineer | ses_deb80e31fffeo2lD5tSRAYF7dY | running |
-| N00 | lead-programmer | ses_deb80e31effeukGnQXyx8zDpxL | running |
-| N01 | engine-programmer | ses_deb80e31dffeyOXEtakXHq2cBN | running |
+| X01 | technical-director | ses_deb80e328ffeqtkSIjOQrU7aAK | accepted 2026-11-26 |
+| X02 | security-engineer | ses_deb80e327ffeFP6W2W288yIUue | accepted 2026-11-26 |
+| X03 | devops-engineer | ses_deb80e31fffeo2lD5tSRAYF7dY | accepted 2026-11-26 |
+| N00 | lead-programmer | ses_deb80e31effeukGnQXyx8zDpxL | accepted 2026-11-26 |
+| N01 | engine-programmer | ses_deb80e31dffeyOXEtakXHq2cBN | accepted 2026-11-26 |
