@@ -105,7 +105,7 @@ eighty more parts.
 | 18 | P04 | audio pack | `library/packs/audio/` | running |
 | 18 | P05 | narrative pack | `library/packs/narrative/` | running |
 | 18 | P06 | localization pack | `library/packs/localization/` | running |
-| 19 | P07 | marketing pack | `library/packs/marketing/` | pending |
+| 19 | P07 | marketing pack | `library/packs/marketing/` | running |
 
 `project.config.json` is created by N00, not the skeleton; versioning lives in
 `agent.lock.json`, so the game repo has no `VERSION` file. `dist/` and `dist-play/`

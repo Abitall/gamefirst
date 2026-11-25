@@ -94,3 +94,4 @@ Review loop: up to 3 rounds per part. A part is accepted only after it passes
 | P04 | technical-artist | ses_deb636d86ffeCrcb3BE2gKFxSY | running |
 | P05 | creative-director | ses_deb636d85ffeoSFtWqxWLPjQEX | running |
 | P06 | qa-lead | ses_deb636d84ffeqoNr9iuLpQIHrZ | running |
+| P07 | release-manager | ses_deb6096ccffeZlo5Y1ImRpiXdD | running |
