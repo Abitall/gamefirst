@@ -57,6 +57,11 @@
 | CLI05 | tools-programmer | ses_debd7ecefffeDy7272hu1abBIq | accepted 2026-11-25 |
 | CLI06 | tools-programmer | ses_debd7eceeffeknNJn198Bl8Mku | accepted 2026-11-25 |
 | CLI07 | tools-programmer | ses_debd7ececffe425xRB6ubtU01K | accepted 2026-11-25 |
+| CLI08 | tools-programmer | ses_debc41caaffecMsPHHUvLVJlRd | accepted 2026-11-25 |
+| CLI09 | tools-programmer | ses_debc41ca8ffe8lgoaDlxET5G7b | accepted 2026-11-25 |
+| CLI10 | tools-programmer | ses_debc41c9fffeMgf5UoBAl81OpK | accepted 2026-11-25 |
+| SL01 | producer | ses_debc41c9effeM4E3OAwYVD4Ss5 | accepted 2026-11-25 |
+| SL02 | producer | ses_debc41c9dffedgiNqjDW6rV1Fe | accepted 2026-11-25 |
 
 Review loop: up to 3 rounds per part. A part is accepted only after it passes
 `docs/REVIEW-RUBRIC.md` and its `JUSTIFICATION.md` and `SOURCES.md` are complete.

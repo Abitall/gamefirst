@@ -1,4 +1,4 @@
-# gamefirst v0.3 вЂ” Build Plan
+# gamefirst v0.3 Р В Р’В Р вЂ™Р’В Р В РІР‚в„ўР вЂ™Р’В Р В Р’В Р вЂ™Р’В Р В Р вЂ Р В РІР‚С™Р вЂ™Р’В Р В Р’В Р вЂ™Р’В Р В РІР‚в„ўР вЂ™Р’В Р В Р’В Р В РІР‚В Р В Р’В Р Р†Р вЂљРЎв„ўР В Р Р‹Р Р†РІР‚С›РЎС›Р В Р’В Р вЂ™Р’В Р В Р’В Р Р†Р вЂљР’В Р В Р’В Р вЂ™Р’В Р В Р вЂ Р В РІР‚С™Р РЋРІвЂћСћР В Р’В Р В Р вЂ№Р В Р Р‹Р РЋРІвЂћСћ Build Plan
 
 Status legend: `pending` -> `drafting` -> `review` -> `accepted` -> `assembled`.
 
@@ -72,11 +72,11 @@ eighty more parts.
 | 11 | CLI05 | sync-agent | `tools/sync-agent.mjs` | accepted |
 | 11 | CLI06 | upgrade | `tools/upgrade.mjs` | accepted |
 | 11 | CLI07 | doctor | `tools/doctor.mjs` | accepted |
-| 12 | CLI08 | lint-agent-context | `tools/lint-agent-context.mjs` | pending |
-| 12 | CLI09 | trigger-check | `tools/trigger-check.mjs` | pending |
-| 12 | CLI10 | capture | `tools/capture.mjs` | pending |
-| 12 | SL01 | /start | `template/.opencode/commands/start.md` | pending |
-| 12 | SL02 | /status | `template/.opencode/commands/status.md` | pending |
+| 12 | CLI08 | lint-agent-context | `tools/lint-agent-context.mjs` | accepted |
+| 12 | CLI09 | trigger-check | `tools/trigger-check.mjs` | accepted |
+| 12 | CLI10 | capture | `tools/capture.mjs` | accepted |
+| 12 | SL01 | /start | `template/.opencode/commands/start.md` | accepted |
+| 12 | SL02 | /status | `template/.opencode/commands/status.md` | accepted |
 | 13 | SL03 | /next | `template/.opencode/commands/next.md` | pending |
 | 13 | SL04 | /verify | `template/.opencode/commands/verify.md` | pending |
 | 13 | SL05 | /retro | `template/.opencode/commands/retro.md` | pending |
@@ -150,7 +150,9 @@ question budget. Batch 9 is committed (`75a5533`) and the smoke test passes
 admission, E08 stop after three failures, E09 fun honesty. Batch 10 is accepted
 and assembled (`224 checks`, 0 failures): E10 context budget, E11 engine
 version, E12 release safety, CLI01 new-project, CLI02 status. Batch 11 is
-assembled and the smoke test passes (`271 checks`, 0 failures): CLI03 verify,
-CLI04 eval, CLI05 sync-agent, CLI06 upgrade, CLI07 doctor. Batch 12 is next:
+committed (`98a3a78`) and the smoke test passes (`271 checks`, 0 failures):
+CLI03 verify, CLI04 eval, CLI05 sync-agent, CLI06 upgrade, CLI07 doctor.
+Batch 12 is committed and the smoke test passes (`319 checks`, 0 failures):
 CLI08 lint-agent-context, CLI09 trigger-check, CLI10 capture, SL01 `/start`,
-SL02 `/status`.
+SL02 `/status`. Batch 13 is running: SL03 `/next`, SL04 `/verify`, SL05
+`/retro`, SL06 `/help`, D01-D06 document templates under the thin protocol.
