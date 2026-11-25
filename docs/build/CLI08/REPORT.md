@@ -88,4 +88,4 @@ the tool as a child process against throwaway temp trees and asserts:
 8. `--root` consumes the next argv token even when it starts with `--`; usage
    errors still exit 2, but the message names a path rather than the flag.
 
-Review: pending
+Review: accepted 2026-11-26

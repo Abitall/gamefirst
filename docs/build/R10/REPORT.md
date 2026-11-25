@@ -94,4 +94,4 @@ not depend on which metric a reviewer applies.
 Overall: **8/9**. The weak spots are the two words of overlap with R4 and a size
 that sits near the top of the band, not a missing mechanism.
 
-Review: pending
+Review: accepted 2026-11-26

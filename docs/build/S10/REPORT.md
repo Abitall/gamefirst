@@ -63,4 +63,4 @@ Unlike S09, both size metrics sit inside the target band, so no trimming pass is
 6. Ownership is not named. C02 gives partner, designer, engineer and critic; the skill does not split the note (A02) from the build (A03), and S09 does in step 8. Naming both costs about 40 characters, which would push chars/4 to roughly 785 - still under 800 but outside the 720-780 band. Decide whether the band or the split matters more.
 7. E08 counts attempts and the skill counts fixes on one point. Confirm they are the same counter, or say which one the stop condition reads.
 
-Review: pending
+Review: accepted 2026-11-26

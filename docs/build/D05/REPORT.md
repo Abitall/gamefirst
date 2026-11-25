@@ -186,4 +186,4 @@ Overall: items 3, 8, and 9 are CONCERNS; the rest PASS. The part is review-ready
 4. **Legend mechanics.** Is the indented fence acceptable, or should the five definitions move inline and drop the sample rows? Recommendation: keep the fence; a check asserts zero items, and the sample is the only place the line shape is shown.
 5. **Priority vocabulary.** Is `P1`–`P3` the right scale, or should it be `сейчас` / `потом`? Recommendation: keep `P1`–`P3`; it is language-neutral, matches the English IDs, and a gate can extend it without changing the parser.
 
-Review: pending
+Review: accepted 2026-11-26

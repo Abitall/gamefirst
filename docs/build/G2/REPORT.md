@@ -86,4 +86,4 @@ Expected: `ok 450.3`. Any other output names the broken check.
 No content production, no polish, no release work was done here; the gate only
 defines the checkpoint. Nothing outside `staging/G2/` was written.
 
-Review: pending
+Review: accepted 2026-11-26

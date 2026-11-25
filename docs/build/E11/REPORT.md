@@ -86,4 +86,4 @@ Design choices:
 - `API.md` is a fixture invention; it must be generated from the 4.2.1 typings
   at build time or it becomes one more claim to trust.
 
-Review: pending
+Review: accepted 2026-11-26

@@ -91,4 +91,4 @@ evidence  <game>/evidence/2026-11-25-mechanic
 - Output is capped at 20 MB and the report keeps a 15-line tail; a chatty check can hide the line that matters deeper in its log, though the full log is on disk.
 - No retry and no parallelism: a flaky check fails the run and a long recipe runs serially, by design.
 
-Review: pending
+Review: accepted 2026-11-26

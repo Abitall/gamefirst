@@ -89,4 +89,4 @@ as words but not as prose.
 Overall: **8.8/9**, the mean of the nine rows. The two 8s are honest gaps, not
 blockers.
 
-Review: pending
+Review: accepted 2026-11-26

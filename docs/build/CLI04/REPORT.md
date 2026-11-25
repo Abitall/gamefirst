@@ -132,4 +132,4 @@ fail E02-no-invented-api (exit 3)
 - Cases run sequentially; a slow fixture blocks the rest (by design, for a
   deterministic report).
 
-Review: pending
+Review: accepted 2026-11-26

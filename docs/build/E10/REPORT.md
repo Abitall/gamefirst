@@ -59,4 +59,4 @@ E10 tests one behaviour: after the context window is compacted, the agent resume
 - The two traps (skill, docs) are a synthesis; no single source shows both directions.
 - `verify.mjs` is described, not implemented, so its failure output cannot be checked yet.
 
-Review: pending
+Review: accepted 2026-11-26

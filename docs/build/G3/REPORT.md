@@ -64,4 +64,4 @@ decision line, an out-of-scope paragraph and the cross-refs.
 - "No open blocker" assumes a shared severity scale; S13's pack defines it, not
   this gate.
 
-Review: pending
+Review: accepted 2026-11-26

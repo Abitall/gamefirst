@@ -140,4 +140,4 @@ teaches `tools/doctor.mjs` to resolve `packs` paths, teaches `tools/verify.mjs`
 (or the lint) to read `budgets`, and updates E11's pin sentence. N02 and N03 can
 start in parallel once N01 shows the shape survives one real engine.
 
-Review: pending
+Review: accepted 2026-11-26

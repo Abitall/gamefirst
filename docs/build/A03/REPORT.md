@@ -97,4 +97,4 @@ All six raised in the first draft are closed; none remains open.
 6. Resolved: no `skill` permission is needed to use S02; referencing the ID is
    enough, and the permission list is unchanged.
 
-Review: pending
+Review: accepted 2026-11-26

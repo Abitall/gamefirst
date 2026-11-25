@@ -133,4 +133,4 @@ console.log(JSON.stringify({ ok: !fail.length, chars: src.length, bytes: buf.len
 6. Which `STATE.md` section holds the pointer line? The command says "one pointer line" and leaves the
    section to A01.
 
-Review: pending
+Review: accepted 2026-11-26

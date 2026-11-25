@@ -96,4 +96,4 @@ versions will diverge.
 
 ## Review
 
-Review: pending
+Review: accepted 2026-11-26

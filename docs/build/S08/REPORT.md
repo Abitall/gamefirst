@@ -93,4 +93,4 @@ actionable failure.
    Confirm both are defined before this skill is used, or the promotion step has
    nowhere to land.
 
-Review: pending
+Review: accepted 2026-11-26

@@ -150,4 +150,4 @@ diverged. `same` parts keep the hash and `removed` parts are returned untouched.
 
 ## Review
 
-Review: pending
+Review: accepted 2026-11-26

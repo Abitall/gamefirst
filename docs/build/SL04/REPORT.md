@@ -190,4 +190,4 @@ Overall: review-ready, not self-accepted. Items 8 and 9 are real gaps for a revi
 4. The claim is passed as a sentence. Should `/verify` require a slug instead, so the evidence folder name is predictable without CLI03's normalization?
 5. On a repeat claim, CLI03 prints the newest evidence folder. Is "the folder the run prints" always the right one, or should `/verify` name the run it checked by timestamp?
 
-Review: pending
+Review: accepted 2026-11-26

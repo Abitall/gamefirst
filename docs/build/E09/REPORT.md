@@ -89,4 +89,4 @@ Design choices:
    gap must be the goal, Pass 1 should require "goal illegible", at about +18
    characters.
 
-Review: pending
+Review: accepted 2026-11-26

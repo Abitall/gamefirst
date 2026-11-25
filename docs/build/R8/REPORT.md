@@ -100,4 +100,4 @@ Windows paths. The em dash in the title is U+2014 and the first line matches
 Overall: **8 / 9** by the rubric's own sections, with the evidence section the
 weakest and size the strongest.
 
-Review: pending
+Review: accepted 2026-11-26

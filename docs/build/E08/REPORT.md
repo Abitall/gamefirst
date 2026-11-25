@@ -116,4 +116,4 @@ Design choices:
 - The fixture is specified, not materialized in staging, matching E03. Until
   CLI04 exists, a reviewer must build the fixture by hand.
 
-Review: pending
+Review: accepted 2026-11-26

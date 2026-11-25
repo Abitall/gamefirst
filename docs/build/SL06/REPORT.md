@@ -48,4 +48,4 @@ Content assertions: frontmatter has `description`, `agent: partner`, `subtask: f
 - The screen is static prose with live values; it cannot know a new file type.
 - `Missing:` names owners by part ID; a user without the blueprint must run `/help` twice.
 
-Review: pending
+Review: accepted 2026-11-26

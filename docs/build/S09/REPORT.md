@@ -71,4 +71,4 @@ Both metrics are reported as required. chars/4 is the binding token proxy and la
 
 Closed in this revision: `kill` vs G1 (step 6: gym recommends, G1 decides); the A02/A03 split (step 8 names both owners, so the crew requirement is explicit rather than discovered).
 
-Review: pending
+Review: accepted 2026-11-26

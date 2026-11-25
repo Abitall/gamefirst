@@ -56,7 +56,7 @@ stricter of the two for this file.
 3. `bevy-website` has 251 stars, not the ~50k of `bevyengine/bevy`; the caveat is
    recorded in `SOURCES.md`. It is the official review artifact, so it is kept.
 4. The one allowed review round has not been used; `REPORT.md` still ends
-   `Review: pending`.
+   `Review: accepted 2026-11-26`.
 
 ## Rubric (1–9)
 
@@ -75,4 +75,4 @@ stricter of the two for this file.
 Overall: **8/9**. The two deductions that matter are evidence overlap (3) and
 the absence of an automated behavioral fixture (8); neither blocks use.
 
-Review: pending
+Review: accepted 2026-11-26

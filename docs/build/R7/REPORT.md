@@ -62,4 +62,4 @@ UTF-8 without BOM; LF only (no CR bytes); only non-ASCII characters are the em d
 | 8 | Testability | Check section names the producer, the reviewer and the evidence; A04 can apply a manual checklist without interpreting intent. | pass |
 | 9 | Integration | S06 produces the set, A04 checks closure, G1 applies the extension, G2 applies the interaction budget; no overlap with R2's question budget. | pass |
 
-Review: pending
+Review: accepted 2026-11-26

@@ -174,4 +174,4 @@ Observed output: seven `PASS` lines, no `FAIL`, then
 
 ## Review
 
-Review: pending
+Review: accepted 2026-11-26

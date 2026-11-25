@@ -129,4 +129,4 @@ Verdict: accept, with the gaps below recorded rather than hidden.
 
 ## Review
 
-Review: pending
+Review: accepted 2026-11-26

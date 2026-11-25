@@ -93,4 +93,4 @@ it for inspection. A manual `core,game` sample produced 47 parts and printed
 
 Overall self-assessment: **accept**. External review has not run yet.
 
-Review: pending
+Review: accepted 2026-11-26

@@ -68,4 +68,4 @@ Overall: 6 PASS, 3 CONCERNS. Review-ready.
 4. **Installer availability.** `tools/new-project.mjs` lives in the gamefirst checkout, so the install step in a shipped game guide depends on that checkout still existing. Recommendation: either keep the guide as a "next project" reference (current wording) or ship the installer as a separate tool.
 5. **Source budget.** The task caps research at 3 sources while `staging/README.md` describes 9 repositories. Recommendation: treat the task budget as authoritative for D09 and record the deviation (done here).
 
-Review: pending
+Review: accepted 2026-11-26

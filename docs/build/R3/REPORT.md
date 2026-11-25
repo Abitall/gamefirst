@@ -61,4 +61,4 @@ Measured with a Node `fs` read of the UTF-8 file; both estimates sit inside the 
 | 8 | Testability | PASS | E05 with three observable failures (task change, writes, link-following) plus the report requirement; cheap to run, actionable when it fails |
 | 9 | Integration | PASS | Loads standalone as plain text, stable filename and heading, cross-refs resolve by ID, no engine/OS/editor assumption |
 
-Review: pending
+Review: accepted 2026-11-26

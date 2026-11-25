@@ -88,4 +88,4 @@ sources.
 - The eval is not yet runnable: the fixture tree is described, not built, so
   this review scores the description only.
 
-Review: pending
+Review: accepted 2026-11-26

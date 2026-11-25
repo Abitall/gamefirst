@@ -87,4 +87,4 @@ headroom under the hard limit by the chars/4 method.
 | 8 | Testability | CONCERNS | Admission is checkable (fixture + `DECISIONS.md` line), but the rule's own effect — fewer unused parts — is measured by the quarterly review, not by an automated check. |
 | 9 | Integration | PASS | References resolve to blueprint parts (R1, R3, E03, E07, S01, S03, S04, S05, M01) and to `DECISIONS.md` (D03), `NOTES.md`, `lessons/`; the file loads standalone with no frontmatter. |
 
-Review: pending
+Review: accepted 2026-11-26

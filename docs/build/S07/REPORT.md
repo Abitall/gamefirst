@@ -96,4 +96,4 @@ chars/4 is the declared gate; words x 1.35 reads lower because the text is path-
 
 Self-verdict: accept. External review decides.
 
-Review: pending
+Review: accepted 2026-11-26

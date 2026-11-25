@@ -94,4 +94,4 @@ the stricter metric.
 | 8 | Testability | pass | E01 (a tuning change touches at most two documents) is the cheap check; docs lint gives three local checks; a failing lint names the missing field or dead link. |
 | 9 | Integration | pass | `R5` and `R5-code-before-docs.md` stable; loads standalone; cross-references resolve; no engine, OS, or editor assumption. |
 
-Review: pending
+Review: accepted 2026-11-26

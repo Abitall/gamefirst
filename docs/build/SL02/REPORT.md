@@ -58,4 +58,4 @@ Result:
 - `Active` prints the first five lock IDs in lock order, not by kind; a very large lock is summarized with `+N more`.
 - `Since` prints the date only; timezone is the lock's ISO string date.
 
-Review: pending
+Review: accepted 2026-11-26

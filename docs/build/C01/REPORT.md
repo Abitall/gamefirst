@@ -73,4 +73,4 @@ limit counts the whole file, including the title and blank lines.
    are used for different properties and disclosed, but a reviewer may ask for
    two fresh repositories.
 
-Review: pending
+Review: accepted 2026-11-26

@@ -87,4 +87,4 @@ green build. The fixture is a specification, not a built repo.
 4. **Spend detection.** "Spends" is in the Fail list for completeness; the
    fixture offers no payment tool, so the bullet is preventive, not exercised.
 
-Review: pending
+Review: accepted 2026-11-26

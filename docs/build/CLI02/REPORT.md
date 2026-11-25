@@ -172,4 +172,4 @@ Observed `--json` for the full fixture (exit 0, root abbreviated):
 
 ## Review
 
-Review: pending
+Review: accepted 2026-11-26

@@ -160,4 +160,4 @@ Overall: review-ready, not self-accepted. Items 8 and 9 are real gaps for a revi
 5. After G2.5: how does the command distinguish a fix or polish item from a feature in BACKLOG? The current wording refuses features but does not classify items; D05 may need a type field.
 6. Conflict display: `BLOCKING — <reason>` names the reason but not the stale STATE line. Is one line enough, or should the command quote the conflicting entry?
 
-Review: pending
+Review: accepted 2026-11-26

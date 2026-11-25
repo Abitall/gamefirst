@@ -66,4 +66,4 @@ chars/4 is the binding proxy: 32.50 under the 800 ceiling and 12.50 under the 78
 6. **Which size metric binds?** chars/4 has 12.50 headroom and words x 1.35 has 41.55; chars/4 is the binding proxy. Any later edit reopens the budget.
 7. **Owners are split.** A02 can write `docs/playtests/**` but not `src/**`; A03 can write `src/**` and needs approval for `docs/playtests/**`. S11 is the producer's procedure, so the partner routes A02 for the note and A03 for the build; a single subagent cannot run it end to end.
 
-Review: pending
+Review: accepted 2026-11-26

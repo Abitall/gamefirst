@@ -158,4 +158,4 @@ target band and should be frozen unless a cut pays for an addition.
 
 ## Review
 
-Review: pending
+Review: accepted 2026-11-26

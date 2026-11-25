@@ -65,4 +65,4 @@ Both metrics are reported as required. chars/4 is the binding proxy and lands in
 
 Closed in this revision: the 72-hour watch now names a human, not A03 - a sub-agent session cannot hold three wall-clock days, and naming one would either be a promise nobody keeps or a scheduled automation holding a support channel, which R10 does not cover. Also closed earlier: questionnaire wording, the uploads-nothing line, the P07 copy boundary. Size was re-measured after every edit, not estimated.
 
-Review: pending
+Review: accepted 2026-11-26

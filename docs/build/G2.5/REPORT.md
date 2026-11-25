@@ -67,4 +67,4 @@ cd staging/G2.5 && node -e "const s=require('fs').readFileSync('artifact/library
 
 Written only under `staging/G2.5/`. No commits, no edits to G2, R9, S11, S12 or the blueprint.
 
-Review: pending
+Review: accepted 2026-11-26

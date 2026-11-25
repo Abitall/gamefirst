@@ -68,4 +68,4 @@ The "twenty questions before code" scenario is caught by the prompt-plus-fixture
 - The run is interactive, so it costs manual time and is not part of the offline suite.
 - Star counts drift; they are dated to 2026-11-25 and rounded.
 
-Review: pending
+Review: accepted 2026-11-26

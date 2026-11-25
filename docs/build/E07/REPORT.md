@@ -84,4 +84,4 @@ R6 admission sentence. CLI04 does not parse the schema; that check is in `Score`
 
 ## Review
 
-`Review: pending`
+`Review: accepted 2026-11-26`

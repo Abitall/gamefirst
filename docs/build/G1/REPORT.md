@@ -106,4 +106,4 @@ The gate is complete, measurable, and bounded. It can be copied to
 `library/game/gates/G1-fun.md` once the two blueprint IDs it cites exist, or
 immediately if ID-level references are accepted.
 
-Review: pending
+Review: accepted 2026-11-26

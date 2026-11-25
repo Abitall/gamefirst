@@ -59,4 +59,4 @@ Largest document: `API.md`, 73% of its token budget. The manifest is not token-c
 6. Licenses for `phaserjs/examples`, `phaserjs/create-game` and `anthropics/skills` are not displayed; no code is copied, but the record needs acceptance.
 7. Who runs R1–R5 on a real project to flip P1–P4 and P7 to verified?
 
-Review: pending
+Review: accepted 2026-11-26

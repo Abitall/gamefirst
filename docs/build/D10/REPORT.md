@@ -135,4 +135,4 @@ Overall: 6 PASS, 3 CONCERNS, 0 FAIL. The concerns are evidence depth, automatic 
 8. Should D10 be linked from a docs index as well? The root README is enough for v0.3; a second index adds a file to keep in sync.
 9. Should a filled example be added as a separate fixture, outside the template? It would prove density without putting a fake decision in the shipped file; it would also add a fifth file to this part.
 
-Review: pending
+Review: accepted 2026-11-26

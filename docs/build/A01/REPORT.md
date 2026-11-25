@@ -71,7 +71,7 @@ Kept:
 
 Self-verdict: **accept**; the permission semantics are confirmed against the documentation, so the only remaining condition is the later A01 eval that exercises the role end to end.
 
-Review: pending
+Review: accepted 2026-11-26
 
 ## Post-review integration
 

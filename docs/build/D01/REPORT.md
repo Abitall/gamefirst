@@ -155,4 +155,4 @@ Overall: items 3, 8, and 9 are CONCERNS; the rest PASS. The part is review-ready
 4. **Live copy.** Does the batch installer own `template/BRIEF.md`, or should the reviewer copy the staging artifact before acceptance? Recommendation: the installer owns it; this report records the forward reference.
 5. **Prompt handling.** Should the prompts stay visible with a delete instruction, or move to HTML comments so a filled brief renders clean? Recommendation: keep them visible for raw-text agents; revisit if humans print the brief.
 
-Review: pending
+Review: accepted 2026-11-26

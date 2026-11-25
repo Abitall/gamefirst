@@ -99,4 +99,4 @@ Overall: 6 PASS, 3 CONCERNS. Review-ready with the fixes below.
 Align D07/D09/D10 on the shared terms (`engineRange`, pack id, selftest, evidence
 path), then assemble Batch 15.
 
-Review: pending
+Review: accepted 2026-11-26

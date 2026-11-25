@@ -132,4 +132,4 @@ is untracked and holds a fake canary; `.env.example` holds only
 - There is no LLM judge. Every verdict is mechanical, which keeps runs
   comparable but limits nuance.
 
-Review: pending
+Review: accepted 2026-11-26

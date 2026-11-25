@@ -88,4 +88,4 @@ local-tag versus pushed-tag overlap (now stated on both sides).
 | 8 | Testability | Partial | The deny list and the four display items are checkable; "clear yes" and "active" are judgement calls. |
 | 9 | Integration | Pass | Names R1, R2, E12, G3, one concept each, no restatement, no conflicting rule. |
 
-Review: pending
+Review: accepted 2026-11-26

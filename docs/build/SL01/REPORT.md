@@ -62,4 +62,4 @@ Assertions covered: `description` present; `agent: partner`; `subtask: false`; I
 - The check is a one-off pasted script, so it will not catch a later edit to the command unless rerun.
 - `G1` is referenced by name; the command does not read the gate file. That is A01's job at the screen, and the gate path is in the blueprint.
 
-Review: pending
+Review: accepted 2026-11-26

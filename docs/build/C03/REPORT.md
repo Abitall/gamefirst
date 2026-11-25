@@ -51,4 +51,4 @@ Format model `library/game/crews/prototype-crew.md` is 2,673 characters / 668 to
 4. **Which targets count.** Work 1 cuts a target without a build command, but the project has no written position on whether a demo branch (for example a web build for the playtest host) is a release target. Not decided here; recorded for the producer.
 5. **Hotfixes.** The Trigger sends post-launch hotfixes to a new crew, which matches "a later release is a new crew" but leaves open whether a one-line patch still needs the full S13 checklist. S13's fast-track idea suggests not; the crew's text does not decide it.
 
-Review: pending
+Review: accepted 2026-11-26

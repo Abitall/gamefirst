@@ -75,4 +75,4 @@ Numbers kept from the round-1 list so the review trail stays readable.
 
 Weighted impression: **8 / 9** — a rule that holds its boundary and its size, with one document-ownership question to settle against D02 and one loophole (post-freeze fixes) left open on purpose.
 
-Review: pending
+Review: accepted 2026-11-26

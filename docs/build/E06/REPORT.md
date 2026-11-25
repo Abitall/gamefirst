@@ -74,4 +74,4 @@ batch; the stricter byte method is the one to trust.
 - Token headroom is 7 by the byte method, so any later wording addition needs a
   matching cut.
 
-Review: pending
+Review: accepted 2026-11-26

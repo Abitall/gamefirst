@@ -54,4 +54,4 @@ All three measures sit inside the target band; the hard maximum has 2.1% headroo
 3. No incident drill exists. E12 scores release safety, not leak response; should a small fixture (canary + fake token in a log) become E13, or is the Check list enough?
 4. The transport sentence ("encrypted to an authenticated peer") is a core default, but a game transport may live in an engine pack. Confirm it belongs here rather than in N00.
 
-Review: pending
+Review: accepted 2026-11-26
