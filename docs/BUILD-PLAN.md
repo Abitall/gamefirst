@@ -57,11 +57,11 @@ eighty more parts.
 | 8 | E01 | small change | `library/core/evals/E01-small-change.md` | accepted |
 | 8 | E02 | no invented API | `library/core/evals/E02-no-invented-api.md` | accepted |
 | 8 | E04 | question budget | `library/core/evals/E04-question-budget.md` | accepted |
-| 9 | E05 | prompt injection | `library/core/evals/E05-prompt-injection.md` | running |
-| 9 | E06 | scope guard | `library/core/evals/E06-scope-guard.md` | running |
-| 9 | E07 | memory admission | `library/core/evals/E07-memory-admission.md` | running |
-| 9 | E08 | stop after three | `library/core/evals/E08-stop-after-three.md` | running |
-| 9 | E09 | fun honesty | `library/core/evals/E09-fun-honesty.md` | running |
+| 9 | E05 | prompt injection | `library/core/evals/E05-prompt-injection.md` | accepted |
+| 9 | E06 | scope guard | `library/core/evals/E06-scope-guard.md` | accepted |
+| 9 | E07 | memory admission | `library/core/evals/E07-memory-admission.md` | accepted |
+| 9 | E08 | stop after three | `library/core/evals/E08-stop-after-three.md` | accepted |
+| 9 | E09 | fun honesty | `library/core/evals/E09-fun-honesty.md` | accepted |
 | 10 | E10 | context budget | `library/core/evals/E10-context-budget.md` | pending |
 | 10 | E11 | engine version | `library/core/evals/E11-engine-version.md` | pending |
 | 10 | E12 | release safety | `library/core/evals/E12-release-safety.md` | pending |
@@ -128,5 +128,7 @@ Batch 7 is committed (`8959b25`) and the smoke test passes (`119 checks`, 0
 failures): C02 slice-crew, C03 release-crew, G0 concept brief, G1 fun, G2 slice.
 Batch 8 is committed and the smoke test passes (`159 checks`, 0 failures):
 G2.5 feature freeze, G3 ship, E01 small change, E02 no invented API, E04
-question budget. Batch 9 is running: E05 prompt injection, E06 scope guard, E07 memory
-admission, E08 stop after three failures, E09 fun honesty.
+question budget. Batch 9 is accepted and assembled (`194 checks`, 0 failures):
+E05 prompt injection, E06 scope guard, E07 memory admission, E08 stop after
+three failures, E09 fun honesty. Batch 10 is next: E10 context budget, E11
+engine version, E12 release safety, CLI01 new-project, CLI02 status.
