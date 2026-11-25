@@ -46,7 +46,7 @@ LF, no `{{`, POSIX paths.
 
 ## Commit
 
-`fa804ec feat(batch-15): add playtest/engine/guide/memory docs and decisions digest`.
+`92720b9 feat(batch-15): add playtest/engine/guide/memory docs and decisions digest`.
 
 ## Smoke test
 
