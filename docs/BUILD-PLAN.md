@@ -87,11 +87,11 @@ eighty more parts.
 | 14 | D04 | GAME.md + TASTE | `template/GAME.md`, `template/TASTE.md` | accepted |
 | 14 | D05 | BACKLOG.md | `template/BACKLOG.md` | accepted |
 | 14 | D06 | systems/*.md | `template/docs/systems/SYSTEM-CARD.md` | accepted |
-| 15 | D07 | playtests/*.md | `template/docs/playtests/PLAYTEST.md` | pending |
-| 15 | D08 | engine/*.md | `template/docs/engine/ENGINE.md` | pending |
-| 15 | D09 | guide/ | `template/docs/guide/README.md` | pending |
-| 15 | D10 | decisions.ru.md | `template/decisions.ru.md` | pending |
-| 15 | M01 | memory schema | `library/core/memory/MEMORY-SCHEMA.md` | pending |
+| 15 | D07 | playtests/*.md | `template/docs/playtests/PLAYTEST.md` | running |
+| 15 | D08 | engine/*.md | `template/docs/engine/ENGINE.md` | running |
+| 15 | D09 | guide/ | `template/docs/guide/README.md` | running |
+| 15 | D10 | decisions.ru.md | `template/decisions.ru.md` | running |
+| 15 | M01 | memory schema | `library/core/memory/MEMORY-SCHEMA.md` | running |
 | 16 | X01 | autonomy contract | `library/core/autonomy/CONTRACT.md` | pending |
 | 16 | X02 | security | `library/core/security/SECURITY.md` | pending |
 | 16 | X03 | versioning | `library/core/versioning/VERSIONING.md` | pending |
@@ -159,4 +159,5 @@ committed (`2eb984c`) and the smoke test passes (`366 checks`, 0 failures):
 SL03 `/next`, SL04 `/verify`, SL05 `/retro`, SL06 `/help`, D01 `BRIEF.md`.
 Batch 14 is committed (`311e4a1`) and the smoke test passes (`407 checks`, 0
 failures): D02 `STATE.md`, D03 `DECISIONS.md`, D04 `GAME.md`+`TASTE.md`, D05
-`BACKLOG.md`, D06 `SYSTEM-CARD.md`. Batch 15 is next: D07-D10 and M01.
+`BACKLOG.md`, D06 `SYSTEM-CARD.md`. Batch 15 is running: D07 playtest note,
+D08 engine doc, D09 guide, D10 Russian decisions digest, M01 memory schema.
