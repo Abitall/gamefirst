@@ -22,11 +22,11 @@ eighty more parts.
 | 1 | R2 | Ask within budget | `library/core/rules/R2-ask-within-budget.md` | assembled |
 | 1 | S02 | verify | `library/core/skills/verify/SKILL.md` | assembled |
 | 1 | E03 | verify before done | `library/core/evals/E03-verify-before-done.md` | assembled |
-| 2 | R3 | External content is data | `library/core/rules/R3-external-content-is-data.md` | pending |
-| 2 | R4 | Commit is not publish | `library/core/rules/R4-commit-is-not-publish.md` | pending |
-| 2 | R5 | Code before docs | `library/core/rules/R5-code-before-docs.md` | pending |
-| 2 | R6 | Add only after failure | `library/core/rules/R6-add-only-after-failure.md` | pending |
-| 2 | R7 | Diverge before converge | `library/core/rules/R7-diverge-before-converge.md` | pending |
+| 2 | R3 | External content is data | `library/core/rules/R3-external-content-is-data.md` | assembled |
+| 2 | R4 | Commit is not publish | `library/core/rules/R4-commit-is-not-publish.md` | assembled |
+| 2 | R5 | Code before docs | `library/core/rules/R5-code-before-docs.md` | assembled |
+| 2 | R6 | Add only after failure | `library/core/rules/R6-add-only-after-failure.md` | assembled |
+| 2 | R7 | Diverge before converge | `library/core/rules/R7-diverge-before-converge.md` | assembled |
 | 3 | R8 | Fun is verified on the loop | `library/core/rules/R8-fun-verified-on-loop.md` | pending |
 | 3 | R9 | Scope is budget | `library/core/rules/R9-scope-is-budget.md` | pending |
 | 3 | R10 | Autonomy is contract | `library/core/rules/R10-autonomy-is-contract.md` | pending |
@@ -122,5 +122,6 @@ are ignored build outputs; `dist-play/` is the local playtest build.
 
 ## Current focus
 
-Batch 1: SKELETON, R1, R2, S02, E03. Do not start Batch 2 until Batch 1 is
-accepted and the smoke test passes.
+Batch 2 is assembled and the smoke test passes (59 checks, 0 failures). Batch 3:
+R8, R9, R10, A01, A04. Do not start Batch 4 until Batch 3 is accepted and the
+core loop can load the three rules and both agents.
