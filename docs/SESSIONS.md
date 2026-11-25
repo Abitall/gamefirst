@@ -85,3 +85,7 @@ Review loop: up to 3 rounds per part. A part is accepted only after it passes
 | X03 | devops-engineer | ses_deb80e31fffeo2lD5tSRAYF7dY | accepted 2026-11-26 |
 | N00 | lead-programmer | ses_deb80e31effeukGnQXyx8zDpxL | accepted 2026-11-26 |
 | N01 | engine-programmer | ses_deb80e31dffeyOXEtakXHq2cBN | accepted 2026-11-26 |
+
+| N02 | engine-programmer | ses_deb721d9affe8zIVQxUiHaIp64 | running |
+| N03 | engine-programmer | ses_deb721d99ffesFvQaNWTbDFbuY | running |
+| P01 | release-manager | ses_deb721d96ffeLDcKXAYJgTsbIe | running |

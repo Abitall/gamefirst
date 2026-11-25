@@ -97,9 +97,9 @@ eighty more parts.
 | 16 | X03 | versioning | `library/core/versioning/VERSIONING.md` | accepted |
 | 16 | N00 | engine contract | `library/engines/CONTRACT.md` | accepted |
 | 16 | N01 | engine-phaser | `library/engines/phaser/` | accepted |
-| 17 | N02 | engine-unity | `library/engines/unity/` | pending |
-| 17 | N03 | engine-godot | `library/engines/godot/` | pending |
-| 17 | P01 | release pack | `library/packs/release/` | pending |
+| 17 | N02 | engine-unity | `library/engines/unity/` | running |
+| 17 | N03 | engine-godot | `library/engines/godot/` | running |
+| 17 | P01 | release pack | `library/packs/release/` | running |
 | 18 | P02 | obsidian pack | `library/packs/obsidian/` | pending |
 | 18 | P03 | art pack | `library/packs/art/` | pending |
 | 18 | P04 | audio pack | `library/packs/audio/` | pending |
