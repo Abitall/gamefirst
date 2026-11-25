@@ -163,5 +163,5 @@ failures): D02 `STATE.md`, D03 `DECISIONS.md`, D04 `GAME.md`+`TASTE.md`, D05
 D08 engine doc, D09 guide, D10 Russian decisions digest, M01 memory schema.
 Batch 16 is committed (`1fda73d`) and accepted: X01 autonomy contract, X02
 security, X03 versioning, N00 engine contract, N01 Phaser pack. Batch 17 is
-accepted: N02 Unity pack, N03 Godot pack, P01 release pack. Smoke test passes
-(`155 checks`, 0 failures). Current focus: Batch 18, P02-P06 packs.
+committed (`73a7a82`): N02 Unity pack, N03 Godot pack, P01 release pack. Smoke
+test passes (`155 checks`, 0 failures). Current focus: Batch 18, P02-P06 packs.
