@@ -157,6 +157,6 @@ passes (`319 checks`, 0 failures): CLI08 lint-agent-context, CLI09
 trigger-check, CLI10 capture, SL01 `/start`, SL02 `/status`. Batch 13 is
 committed (`2eb984c`) and the smoke test passes (`366 checks`, 0 failures):
 SL03 `/next`, SL04 `/verify`, SL05 `/retro`, SL06 `/help`, D01 `BRIEF.md`.
-Batch 14 is assembled and the smoke test passes (`407 checks`, 0 failures): D02
-`STATE.md`, D03 `DECISIONS.md`, D04 `GAME.md`+`TASTE.md`, D05 `BACKLOG.md`,
-D06 `SYSTEM-CARD.md`. Commit pending; Batch 15 is next: D07-D10 and M01.
+Batch 14 is committed (`311e4a1`) and the smoke test passes (`407 checks`, 0
+failures): D02 `STATE.md`, D03 `DECISIONS.md`, D04 `GAME.md`+`TASTE.md`, D05
+`BACKLOG.md`, D06 `SYSTEM-CARD.md`. Batch 15 is next: D07-D10 and M01.
