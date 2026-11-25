@@ -27,11 +27,11 @@ eighty more parts.
 | 2 | R5 | Code before docs | `library/core/rules/R5-code-before-docs.md` | assembled |
 | 2 | R6 | Add only after failure | `library/core/rules/R6-add-only-after-failure.md` | assembled |
 | 2 | R7 | Diverge before converge | `library/core/rules/R7-diverge-before-converge.md` | assembled |
-| 3 | R8 | Fun is verified on the loop | `library/core/rules/R8-fun-verified-on-loop.md` | pending |
-| 3 | R9 | Scope is budget | `library/core/rules/R9-scope-is-budget.md` | pending |
-| 3 | R10 | Autonomy is contract | `library/core/rules/R10-autonomy-is-contract.md` | pending |
-| 3 | A01 | partner | `library/core/agents/partner.md` | pending |
-| 3 | A04 | critic | `library/core/agents/critic.md` | pending |
+| 3 | R8 | Fun is verified on the loop | `library/core/rules/R8-fun-verified-on-loop.md` | accepted |
+| 3 | R9 | Scope is budget | `library/core/rules/R9-scope-is-budget.md` | accepted |
+| 3 | R10 | Autonomy is contract | `library/core/rules/R10-autonomy-is-contract.md` | accepted |
+| 3 | A01 | partner | `library/core/agents/partner.md` | accepted |
+| 3 | A04 | critic | `library/core/agents/critic.md` | accepted |
 | 4 | A02 | designer | `library/core/agents/designer.md` | pending |
 | 4 | A03 | engineer | `library/core/agents/engineer.md` | pending |
 | 4 | S01 | research | `library/core/skills/research/SKILL.md` | pending |
@@ -122,6 +122,7 @@ are ignored build outputs; `dist-play/` is the local playtest build.
 
 ## Current focus
 
-Batch 2 is assembled and the smoke test passes (59 checks, 0 failures). Batch 3:
-R8, R9, R10, A01, A04. Do not start Batch 4 until Batch 3 is accepted and the
-core loop can load the three rules and both agents.
+Batch 3 is assembled and the smoke test passes (78 checks, 0 failures).
+Batch 4: A02 designer, A03 engineer, S01 research, S03 retrospect, S04
+import. Do not start Batch 5 until Batch 4 is accepted and the ten rules plus
+two agents load together in a disposable game.
