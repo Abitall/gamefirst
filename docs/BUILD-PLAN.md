@@ -1,4 +1,4 @@
-# gamefirst v0.3 Р В Р’В Р вЂ™Р’В Р В РІР‚в„ўР вЂ™Р’В Р В Р’В Р вЂ™Р’В Р В Р вЂ Р В РІР‚С™Р вЂ™Р’В Р В Р’В Р вЂ™Р’В Р В РІР‚в„ўР вЂ™Р’В Р В Р’В Р В РІР‚В Р В Р’В Р Р†Р вЂљРЎв„ўР В Р Р‹Р Р†РІР‚С›РЎС›Р В Р’В Р вЂ™Р’В Р В Р’В Р Р†Р вЂљР’В Р В Р’В Р вЂ™Р’В Р В Р вЂ Р В РІР‚С™Р РЋРІвЂћСћР В Р’В Р В Р вЂ№Р В Р Р‹Р РЋРІвЂћСћ Build Plan
+# gamefirst v0.3 Р В Р’В Р вЂ™Р’В Р В РІР‚в„ўР вЂ™Р’В Р В Р’В Р Р†Р вЂљРІвЂћСћР В РІР‚в„ўР вЂ™Р’В Р В Р’В Р вЂ™Р’В Р В РІР‚в„ўР вЂ™Р’В Р В Р’В Р В РІР‚В Р В Р’В Р Р†Р вЂљРЎв„ўР В РІР‚в„ўР вЂ™Р’В Р В Р’В Р вЂ™Р’В Р В РІР‚в„ўР вЂ™Р’В Р В Р’В Р Р†Р вЂљРІвЂћСћР В РІР‚в„ўР вЂ™Р’В Р В Р’В Р вЂ™Р’В Р В Р’В Р Р†Р вЂљР’В Р В Р’В Р вЂ™Р’В Р В Р вЂ Р В РІР‚С™Р РЋРІвЂћСћР В Р’В Р В Р вЂ№Р В Р вЂ Р Р†Р вЂљРЎвЂєР РЋРЎвЂєР В Р’В Р вЂ™Р’В Р В РІР‚в„ўР вЂ™Р’В Р В Р’В Р вЂ™Р’В Р В Р вЂ Р В РІР‚С™Р вЂ™Р’В Р В Р’В Р вЂ™Р’В Р В РІР‚в„ўР вЂ™Р’В Р В Р’В Р В РІР‚В Р В Р’В Р Р†Р вЂљРЎв„ўР В Р Р‹Р Р†РІР‚С›РЎС›Р В Р’В Р вЂ™Р’В Р В Р’В Р В РІР‚в„–Р В Р’В Р В Р вЂ№Р В Р Р‹Р Р†РІР‚С›РЎС› Build Plan
 
 Status legend: `pending` -> `drafting` -> `review` -> `accepted` -> `assembled`.
 
@@ -77,11 +77,11 @@ eighty more parts.
 | 12 | CLI10 | capture | `tools/capture.mjs` | accepted |
 | 12 | SL01 | /start | `template/.opencode/commands/start.md` | accepted |
 | 12 | SL02 | /status | `template/.opencode/commands/status.md` | accepted |
-| 13 | SL03 | /next | `template/.opencode/commands/next.md` | pending |
-| 13 | SL04 | /verify | `template/.opencode/commands/verify.md` | pending |
-| 13 | SL05 | /retro | `template/.opencode/commands/retro.md` | pending |
-| 13 | SL06 | /help | `template/.opencode/commands/help.md` | pending |
-| 13 | D01 | BRIEF.md | `template/BRIEF.md` | pending |
+| 13 | SL03 | /next | `template/.opencode/commands/next.md` | running |
+| 13 | SL04 | /verify | `template/.opencode/commands/verify.md` | running |
+| 13 | SL05 | /retro | `template/.opencode/commands/retro.md` | running |
+| 13 | SL06 | /help | `template/.opencode/commands/help.md` | running |
+| 13 | D01 | BRIEF.md | `template/BRIEF.md` | running |
 | 14 | D02 | STATE.md | `template/STATE.md` | pending |
 | 14 | D03 | DECISIONS.md | `template/DECISIONS.md` | pending |
 | 14 | D04 | GAME.md + TASTE | `template/GAME.md`, `template/TASTE.md` | pending |
