@@ -1,0 +1,18 @@
+{
+  "id": "pack-narrative",
+  "version": "0.1.0",
+  "requires": ["core", "game"],
+  "loaded": "on-demand",
+  "files": [
+    "PACK.md",
+    "selftest.mjs",
+    "templates/story-bible.md"
+  ],
+  "hashes": {
+    "PACK.md": "546c2033dd765ba2f0440a297ec3a4e061534b6654cc89a763a1da21b2d865e4",
+    "selftest.mjs": "a3c0e984cb6b6846824efc4e3902a10cba3699014489b198f85e941e724ea433",
+    "templates/story-bible.md": "1ca9515a23fbf1b80912785648d04312032c9d76c6c28d31cda12cf1c6467fa2"
+  },
+  "selftest": "node selftest.mjs",
+  "upgrade": "none"
+}

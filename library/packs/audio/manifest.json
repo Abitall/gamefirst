@@ -1,0 +1,14 @@
+{
+  "id": "pack-audio",
+  "version": "0.1.0",
+  "requires": ["core", "game"],
+  "loaded": "on-demand",
+  "files": ["PACK.md", "selftest.mjs", "templates/audio-brief.md"],
+  "hashes": {
+    "PACK.md": "5daab86486cd295592ea6e780b576c91801434ad63fabe9ae80954357ea009d6",
+    "selftest.mjs": "09aba9dc4fa5350c85729cc8fe8d9ca8e36639d98dd8c0761868a1f6505bff0e",
+    "templates/audio-brief.md": "c9af9f56ea3b7410e63809d46f9745de61463842210e42e7d4e5286837ecb8a6"
+  },
+  "selftest": "node selftest.mjs",
+  "upgrade": "none"
+}

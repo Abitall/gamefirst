@@ -1,0 +1,21 @@
+{
+  "id": "pack-obsidian",
+  "version": "0.1.0",
+  "requires": [
+    "core",
+    "game"
+  ],
+  "loaded": "on-demand",
+  "files": [
+    "PACK.md",
+    "selftest.mjs",
+    "templates/note-card.md"
+  ],
+  "hashes": {
+    "PACK.md": "2e1ed68cfaa3c1ec4af7beec325ecda1ef4c9b4a06f983c9610d0385affcb460",
+    "selftest.mjs": "5b6fe9ac9f80f773f744400b89825dbc0badcf6fdda3d42082390d2604b40a56",
+    "templates/note-card.md": "66d71ded0b3b09bca3708649d571fd100fd269e85919828fc515b2cbd9c10ff5"
+  },
+  "selftest": "node selftest.mjs",
+  "upgrade": "none"
+}

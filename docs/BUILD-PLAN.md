@@ -100,12 +100,12 @@ eighty more parts.
 | 17 | N02 | engine-unity | `library/engines/unity/` | accepted |
 | 17 | N03 | engine-godot | `library/engines/godot/` | accepted |
 | 17 | P01 | release pack | `library/packs/release/` | accepted |
-| 18 | P02 | obsidian pack | `library/packs/obsidian/` | running |
-| 18 | P03 | art pack | `library/packs/art/` | running |
-| 18 | P04 | audio pack | `library/packs/audio/` | running |
-| 18 | P05 | narrative pack | `library/packs/narrative/` | running |
-| 18 | P06 | localization pack | `library/packs/localization/` | running |
-| 19 | P07 | marketing pack | `library/packs/marketing/` | running |
+| 18 | P02 | obsidian pack | `library/packs/obsidian/` | accepted |
+| 18 | P03 | art pack | `library/packs/art/` | accepted |
+| 18 | P04 | audio pack | `library/packs/audio/` | accepted |
+| 18 | P05 | narrative pack | `library/packs/narrative/` | accepted |
+| 18 | P06 | localization pack | `library/packs/localization/` | accepted |
+| 19 | P07 | marketing pack | `library/packs/marketing/` | accepted |
 
 `project.config.json` is created by N00, not the skeleton; versioning lives in
 `agent.lock.json`, so the game repo has no `VERSION` file. `dist/` and `dist-play/`
@@ -164,4 +164,7 @@ D08 engine doc, D09 guide, D10 Russian decisions digest, M01 memory schema.
 Batch 16 is committed (`1fda73d`) and accepted: X01 autonomy contract, X02
 security, X03 versioning, N00 engine contract, N01 Phaser pack. Batch 17 is
 committed (`73a7a82`): N02 Unity pack, N03 Godot pack, P01 release pack. Smoke
-test passes (`155 checks`, 0 failures). Current focus: Batch 18, P02-P06 packs.
+test passes (`155 checks`, 0 failures). Batch 18 is accepted: P02 obsidian,
+P03 art, P04 audio, P05 narrative, P06 localization; every pack selftest passes.
+Batch 19 is accepted: P07 marketing; selftest 16/16. Current focus: final
+install/use description and the four external reviews.

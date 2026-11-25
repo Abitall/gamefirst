@@ -1,0 +1,21 @@
+{
+  "id": "pack-art",
+  "version": "0.1.0",
+  "requires": [
+    "core",
+    "game"
+  ],
+  "loaded": "on-demand",
+  "files": [
+    "PACK.md",
+    "selftest.mjs",
+    "templates/asset-spec.md"
+  ],
+  "hashes": {
+    "PACK.md": "59fe88e3b686f75ea76442ad1eef6d6dac3af047c2c48e4183e8f6a4110d46d1",
+    "selftest.mjs": "f184d63d17d48e66792fd23e0ab57a7b8f7084483eaa45ceeae6fccc6ed0b88c",
+    "templates/asset-spec.md": "df010a5b6e09afba331c8925e1e468efb1b4a2c3f6245c2f45b6620ebda0ab05"
+  },
+  "selftest": "node selftest.mjs",
+  "upgrade": "none"
+}

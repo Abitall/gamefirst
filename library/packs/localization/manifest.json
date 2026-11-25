@@ -1,0 +1,21 @@
+{
+  "files": [
+    "PACK.md",
+    "selftest.mjs",
+    "templates/glossary.md"
+  ],
+  "hashes": {
+    "PACK.md": "0fc9cd0945b8525b0827191d8b3975552b8cf76a38c89811c8cd5d2e495eae83",
+    "selftest.mjs": "c48ff8392abc62e4d9301b3132baf1f4ef17e9bebf35d7484efe3f2eba482f7e",
+    "templates/glossary.md": "35fe561bae9bb107dd5a6b3a6e87d46277928fdea2f7a8e25d6b4fc240fc708d"
+  },
+  "id": "pack-localization",
+  "loaded": "on-demand",
+  "requires": [
+    "core",
+    "game"
+  ],
+  "selftest": "node selftest.mjs",
+  "upgrade": "none",
+  "version": "0.1.0"
+}
