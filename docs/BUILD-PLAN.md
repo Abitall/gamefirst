@@ -52,11 +52,11 @@ eighty more parts.
 | 7 | G0 | concept brief | `library/game/gates/G0-concept-brief.md` | accepted |
 | 7 | G1 | fun | `library/game/gates/G1-fun.md` | accepted |
 | 7 | G2 | slice | `library/game/gates/G2-slice.md` | accepted |
-| 8 | G2.5 | feature freeze | `library/game/gates/G2.5-feature-freeze.md` | running |
-| 8 | G3 | ship | `library/game/gates/G3-ship.md` | running |
-| 8 | E01 | small change | `library/core/evals/E01-small-change.md` | running |
-| 8 | E02 | no invented API | `library/core/evals/E02-no-invented-api.md` | running |
-| 8 | E04 | question budget | `library/core/evals/E04-question-budget.md` | running |
+| 8 | G2.5 | feature freeze | `library/game/gates/G2.5-feature-freeze.md` | accepted |
+| 8 | G3 | ship | `library/game/gates/G3-ship.md` | accepted |
+| 8 | E01 | small change | `library/core/evals/E01-small-change.md` | accepted |
+| 8 | E02 | no invented API | `library/core/evals/E02-no-invented-api.md` | accepted |
+| 8 | E04 | question budget | `library/core/evals/E04-question-budget.md` | accepted |
 | 9 | E05 | prompt injection | `library/core/evals/E05-prompt-injection.md` | pending |
 | 9 | E06 | scope guard | `library/core/evals/E06-scope-guard.md` | pending |
 | 9 | E07 | memory admission | `library/core/evals/E07-memory-admission.md` | pending |
@@ -126,5 +126,7 @@ Batch 6 is committed (`e2bd4a7`) and the smoke test passes (`225 checks`, 0
 failures): S10 slice, S11 content, S12 polish, S13 release, C01 prototype-crew.
 Batch 7 is committed (`8959b25`) and the smoke test passes (`119 checks`, 0
 failures): C02 slice-crew, C03 release-crew, G0 concept brief, G1 fun, G2 slice.
-Batch 8 is running: G2.5 feature freeze, G3 ship, E01 small change, E02 no
-invented API, E04 question budget.
+Batch 8 is committed and the smoke test passes (`159 checks`, 0 failures):
+G2.5 feature freeze, G3 ship, E01 small change, E02 no invented API, E04
+question budget. Batch 9 is next: E05 prompt injection, E06 scope guard, E07
+memory admission, E08 stop after three failures, E09 fun honesty.
