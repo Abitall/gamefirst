@@ -89,3 +89,8 @@ Review loop: up to 3 rounds per part. A part is accepted only after it passes
 | N02 | engine-programmer | ses_deb721d9affe8zIVQxUiHaIp64 | accepted 2026-11-26 |
 | N03 | engine-programmer | ses_deb721d99ffesFvQaNWTbDFbuY | accepted 2026-11-26 |
 | P01 | release-manager | ses_deb721d96ffeLDcKXAYJgTsbIe | accepted 2026-11-26 |
+| P02 | producer | ses_deb636d8fffezh28p5Han3RcKl | running |
+| P03 | art-director | ses_deb636d8effeEi9P3Q4sMHkV7O | running |
+| P04 | technical-artist | ses_deb636d86ffeCrcb3BE2gKFxSY | running |
+| P05 | creative-director | ses_deb636d85ffeoSFtWqxWLPjQEX | running |
+| P06 | qa-lead | ses_deb636d84ffeqoNr9iuLpQIHrZ | running |

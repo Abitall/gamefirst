@@ -100,11 +100,11 @@ eighty more parts.
 | 17 | N02 | engine-unity | `library/engines/unity/` | accepted |
 | 17 | N03 | engine-godot | `library/engines/godot/` | accepted |
 | 17 | P01 | release pack | `library/packs/release/` | accepted |
-| 18 | P02 | obsidian pack | `library/packs/obsidian/` | pending |
-| 18 | P03 | art pack | `library/packs/art/` | pending |
-| 18 | P04 | audio pack | `library/packs/audio/` | pending |
-| 18 | P05 | narrative pack | `library/packs/narrative/` | pending |
-| 18 | P06 | localization pack | `library/packs/localization/` | pending |
+| 18 | P02 | obsidian pack | `library/packs/obsidian/` | running |
+| 18 | P03 | art pack | `library/packs/art/` | running |
+| 18 | P04 | audio pack | `library/packs/audio/` | running |
+| 18 | P05 | narrative pack | `library/packs/narrative/` | running |
+| 18 | P06 | localization pack | `library/packs/localization/` | running |
 | 19 | P07 | marketing pack | `library/packs/marketing/` | pending |
 
 `project.config.json` is created by N00, not the skeleton; versioning lives in
