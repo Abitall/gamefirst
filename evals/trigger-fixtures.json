@@ -1,0 +1,7 @@
+{
+  "cases": [
+    { "id": "gym", "prompt": "S09", "expect": ["S09"], "forbid": [] },
+    { "id": "critic", "prompt": "critic", "expect": ["critic"], "forbid": [] },
+    { "id": "release", "prompt": "S13", "expect": ["S13"], "forbid": [] }
+  ]
+}

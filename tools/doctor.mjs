@@ -183,6 +183,7 @@ function checkOpencode(add, root, locked) {
   else if (locked) {
     for (const file of walk(dir)) {
       const rel = posix(relative(root, file));
+      if (rel.startsWith('.opencode/commands/')) continue;
       if (file.endsWith('.md') && !locked.has(rel)) add('warn', 'opencode', rel, 0, 'not in agent.lock.json; run sync-agent or remove it');
     }
   }
@@ -199,7 +200,10 @@ function checkProject(add, root) {
   if (loaded.invalid) return;
   const data = loaded.data && typeof loaded.data === 'object' ? loaded.data : {};
   const recipe = data.verify && data.verify.recipe;
-  if (!Array.isArray(recipe) || recipe.length === 0) add('error', 'config', 'project.config.json', 0, 'verify recipe is missing or empty');
+  if (!Array.isArray(recipe) || recipe.length === 0) {
+    if (data.engine === null) add('warn', 'config', 'project.config.json', 0, 'verify recipe is empty until an engine is chosen');
+    else add('error', 'config', 'project.config.json', 0, 'verify recipe is missing or empty');
+  }
   else if (recipe.some((step) => typeof step !== 'string' && (typeof step !== 'object' || step === null))) add('warn', 'config', 'project.config.json', 0, 'verify recipe step is neither a string nor an object');
 }
 

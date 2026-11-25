@@ -183,4 +183,8 @@ The verdicts are the author's; the reviewer decides `accept`, `revise` or
 - `--fixtures` may point outside `--root`; that is intentional for CI, but it
   means the tool does not enforce a sandbox. It still only reads.
 
-Review: pending
+## Post-acceptance fixes
+
+2026-11-26: explicit part IDs in a fixture prompt are now matched case-insensitively, so `S09` selects S09 instead of falling through to lexical scoring. A three-case curated fixture set now ships at `evals/trigger-fixtures.json`; `node tools/trigger-check.mjs --root .` passes.
+
+Review: accepted 2026-11-26

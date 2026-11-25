@@ -154,6 +154,13 @@ Observed `--json` for the same repo (root abbreviated):
 - Running on `template/` fails by design (placeholder, missing lock/config);
   that is the expected output before N00 and CLI01 run.
 
+## Post-acceptance fixes
+
+2026-11-26: a fresh project with `engine: null` now reports an empty verify
+recipe as a warning, not an error; `.opencode/commands/` are template-native and
+are exempt from the `agent.lock.json` coverage warning. Both changes are covered
+by the fresh-project doctor run.
+
 ## Review
 
-Review: pending
+Review: accepted 2026-11-26

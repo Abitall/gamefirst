@@ -147,8 +147,9 @@ function buildModel(parts) {
 }
 function score(part, prompt, model) {
   const tokens = tokenize(prompt);
-  const ids = new Set(tokens.filter((token) => ID_LIKE.test(token) && model.ids.has(token)));
-  if (ids.has(part.key)) return 1;
+  const knownIds = new Set([...model.ids].map((id) => id.toLowerCase()));
+  const ids = new Set(tokens.filter((token) => knownIds.has(token)));
+  if (ids.has(part.key.toLowerCase())) return 1;
   const counts = new Map();
   for (const token of tokens) if (!ids.has(token)) counts.set(token, (counts.get(token) || 0) + 1);
   let total = 0, matched = 0;
