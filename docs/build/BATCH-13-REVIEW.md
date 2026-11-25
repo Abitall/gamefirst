@@ -10,7 +10,7 @@ covered by the Batch 13 smoke test.
 | SL03 | producer | `template/.opencode/commands/next.md` | 1,190 / 297.5 | 3 (thin) | 2 | accepted |
 | SL04 | producer | `template/.opencode/commands/verify.md` | 1,180 / 295.0 | 3 (thin) | 1 | accepted |
 | SL05 | producer | `template/.opencode/commands/retro.md` | 1,152 / 288.0 | 3 (thin) | 1 | accepted |
-| SL06 | producer | `template/.opencode/commands/help.md` | 1,185 / 296.25 | 3 (thin) | 1 | accepted |
+| SL06 | producer | `template/.opencode/commands/help.md` | 1,186 / 296.5 | 3 (thin) | 1 | accepted |
 | D01 | game-designer | `template/BRIEF.md` | 1,821 / 455.25 | 3 (thin) | 1 | accepted |
 
 All five are under their limits: commands ≤300 tokens, BRIEF ≤800.

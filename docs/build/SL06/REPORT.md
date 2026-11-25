@@ -8,16 +8,16 @@
 
 | Measure | Value | Limit | Headroom |
 |---|---|---|---|
-| Characters | 1,185 | — | — |
-| Tokens (chars / 4) | 296.25 | 300 | 3.75 (1.25%) |
+| Characters | 1,186 | - | - |
+| Tokens (chars / 4) | 296.5 | 300 | 3.5 (1.17%) |
 | Lines | 19 | one screen | fits |
-| Bytes | 1,185 | — | — |
+| Bytes | 1,186 | - | - |
 
 UTF-8 without BOM, LF only, no `{{`, ASCII-only content, final newline. The artifact was written at `staging/SL06/artifact/template/.opencode/commands/help.md`; the live target `template/.opencode/commands/help.md` is copied on acceptance.
 
 ## Check
 
-`node C:\Users\Chirv\AppData\Local\Temp\opencode\sl06-check.mjs` returned `{ ok: true, chars: 1185, tokens: 296.25, lines: 19, frontmatter: {...}, labels: [...], ids: [...], placeholder: false, bom: false, crlf: 0 }`.
+`node C:\Users\Chirv\AppData\Local\Temp\opencode\sl06-check.mjs` returned `{ ok: true, chars: 1186, tokens: 296.5, lines: 19, frontmatter: {...}, labels: [...], ids: [...], placeholder: false, bom: false, crlf: 0 }`.
 
 Content assertions: frontmatter has `description`, `agent: partner`, `subtask: false`; the six labels `Game/Phase/Mode/Gate/Next/Files/Commands/Guide` are present once; the six command names are present; IDs A01, R2, R5, R10 resolve; no duplicate lines with `start.md`, `status.md`, `next.md`, `verify.md`, `retro.md`, `AGENTS.md` or `README.md`.
 
@@ -29,7 +29,7 @@ Content assertions: frontmatter has `description`, `agent: partner`, `subtask: f
 | 2 | Function | pass | Input: five files; output: one screen; done: all labels; failure: `Missing:` with owner. |
 | 3 | Evidence | pass | 3 sources in `SOURCES.md` (2 external + A01). |
 | 4 | Blueprint fit | pass | `template/.opencode/commands/help.md`, read-only, no engine. |
-| 5 | Size | pass | 296.25 of 300. |
+| 5 | Size | pass | 296.5 of 300. |
 | 6 | Language and encoding | pass | English; UTF-8 no BOM, LF, ASCII. |
 | 7 | Security | pass | Read-only, no shell, no network, no secrets. |
 | 8 | Testability | pass with caveat | Structural check passes; there is no command runtime harness. |
