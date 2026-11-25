@@ -1,0 +1,33 @@
+{
+  "id": "engine-godot",
+  "engine": "godot",
+  "engineRange": ">=4.0 <5",
+  "version": "0.1.0",
+  "stability": "beta",
+  "parts": [
+    "docs",
+    "recipe"
+  ],
+  "files": [
+    "API.md",
+    "PITFALLS.md",
+    "RECIPES.md",
+    "RULES.md",
+    "selftest.mjs"
+  ],
+  "hashes": {
+    "API.md": "5f3888d892a0d7ea70b468f5419bf5fbbac629eb133652aade8bbde2c8da5afe",
+    "PITFALLS.md": "e8ce2257c0dad512e2a1683623f686124e47c791538f3d955093a1d46fe095a7",
+    "RECIPES.md": "3e8a6c63ab31018b5dc822f1ea44a17c20cd75a1995b418fb61f0fad19dde36b",
+    "RULES.md": "44305fd62bb9f5f99cc2d6c3034a52ff9de5724216821f90144358dd46426fbb",
+    "selftest.mjs": "34029727719224d356b041f741c3310e902c935b0ae8b5fe6a745f6cc8f54b9b"
+  },
+  "selftest": "node selftest.mjs",
+  "upgrade": "none",
+  "apiSource": {
+    "kind": "source",
+    "uri": "https://github.com/godotengine/godot/tree/4.7.2-stable/doc/classes",
+    "version": "4.7.2",
+    "date": "2026-11-26"
+  }
+}

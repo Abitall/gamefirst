@@ -97,9 +97,9 @@ eighty more parts.
 | 16 | X03 | versioning | `library/core/versioning/VERSIONING.md` | accepted |
 | 16 | N00 | engine contract | `library/engines/CONTRACT.md` | accepted |
 | 16 | N01 | engine-phaser | `library/engines/phaser/` | accepted |
-| 17 | N02 | engine-unity | `library/engines/unity/` | running |
-| 17 | N03 | engine-godot | `library/engines/godot/` | running |
-| 17 | P01 | release pack | `library/packs/release/` | running |
+| 17 | N02 | engine-unity | `library/engines/unity/` | accepted |
+| 17 | N03 | engine-godot | `library/engines/godot/` | accepted |
+| 17 | P01 | release pack | `library/packs/release/` | accepted |
 | 18 | P02 | obsidian pack | `library/packs/obsidian/` | pending |
 | 18 | P03 | art pack | `library/packs/art/` | pending |
 | 18 | P04 | audio pack | `library/packs/audio/` | pending |
@@ -162,6 +162,6 @@ failures): D02 `STATE.md`, D03 `DECISIONS.md`, D04 `GAME.md`+`TASTE.md`, D05
 `BACKLOG.md`, D06 `SYSTEM-CARD.md`. Batch 15 is accepted: D07 playtest note,
 D08 engine doc, D09 guide, D10 Russian decisions digest, M01 memory schema.
 Batch 16 is committed (`1fda73d`) and accepted: X01 autonomy contract, X02
-security, X03 versioning, N00 engine contract, N01 Phaser pack. Smoke test
-passes (`390 checks`, 0 failures). Current focus: Batch 17, N02 Unity pack, N03
-Godot pack, packs.
+security, X03 versioning, N00 engine contract, N01 Phaser pack. Batch 17 is
+accepted: N02 Unity pack, N03 Godot pack, P01 release pack. Smoke test passes
+(`155 checks`, 0 failures). Current focus: Batch 18, P02-P06 packs.

@@ -1,0 +1,14 @@
+{
+  "id": "pack-release",
+  "version": "0.1.0",
+  "requires": ["core", "game"],
+  "loaded": "on-demand",
+  "files": ["PACK.md", "selftest.mjs", "templates/release-record.md"],
+  "hashes": {
+    "PACK.md": "9369c2c1e7a5cef67a5b763bef03e77a7afb2727e0bdba682be5ab53957858ba",
+    "selftest.mjs": "d6a99f6fc883dc99a8b7fdd34d5620122e2ea0f0ef4a564d6e37ec075459f9f1",
+    "templates/release-record.md": "3da9de390379eaee4818743f97e96a07bef3962c4d39c858c7f1c1816c82bb61"
+  },
+  "selftest": "node selftest.mjs",
+  "upgrade": "none"
+}

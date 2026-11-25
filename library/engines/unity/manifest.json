@@ -1,0 +1,33 @@
+{
+  "id": "engine-unity",
+  "engine": "unity",
+  "engineRange": ">=6000.0 <6001",
+  "version": "0.1.0",
+  "stability": "beta",
+  "parts": [
+    "docs",
+    "recipe"
+  ],
+  "files": [
+    "API.md",
+    "PITFALLS.md",
+    "RECIPES.md",
+    "RULES.md",
+    "selftest.mjs"
+  ],
+  "hashes": {
+    "API.md": "8dac661900d032b1ae30ea1488cc89d106c93fffb2112f4eb7b8b5befb3aa9b0",
+    "PITFALLS.md": "fa32f489d5ab4f90007c8968e0d9a84f35996f96c654560fc45430502c98290a",
+    "RECIPES.md": "ebc03365061b5446192c4d850202315ca5bd6db257ef5794c1b5107caab9e97f",
+    "RULES.md": "c509b6ba2118530c3e42a3d904dcdfa6be78617b2796f7016849504567886e2b",
+    "selftest.mjs": "93deb596d43a18a8023ad684e5cad469fdd1353037dbbd452de7e9f9192dad5a"
+  },
+  "selftest": "node selftest.mjs",
+  "upgrade": "none",
+  "apiSource": {
+    "kind": "source",
+    "uri": "file:///C:/Program Files/Unity/Hub/Editor/6000.3.24f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll",
+    "version": "6000.3.24f1",
+    "date": "2026-11-26"
+  }
+}
