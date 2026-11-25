@@ -1,4 +1,4 @@
-# gamefirst v0.3 — Build Plan
+# gamefirst v0.3 вЂ” Build Plan
 
 Status legend: `pending` -> `drafting` -> `review` -> `accepted` -> `assembled`.
 
@@ -47,11 +47,11 @@ eighty more parts.
 | 6 | S12 | polish | `library/game/skills/polish/SKILL.md` | accepted |
 | 6 | S13 | release | `library/game/skills/release/SKILL.md` | accepted |
 | 6 | C01 | prototype-crew | `library/game/crews/prototype-crew.md` | accepted |
-| 7 | C02 | slice-crew | `library/game/crews/slice-crew.md` | pending |
-| 7 | C03 | release-crew | `library/game/crews/release-crew.md` | pending |
-| 7 | G0 | concept brief | `library/game/gates/G0-concept-brief.md` | pending |
-| 7 | G1 | fun | `library/game/gates/G1-fun.md` | pending |
-| 7 | G2 | slice | `library/game/gates/G2-slice.md` | pending |
+| 7 | C02 | slice-crew | `library/game/crews/slice-crew.md` | accepted |
+| 7 | C03 | release-crew | `library/game/crews/release-crew.md` | accepted |
+| 7 | G0 | concept brief | `library/game/gates/G0-concept-brief.md` | accepted |
+| 7 | G1 | fun | `library/game/gates/G1-fun.md` | accepted |
+| 7 | G2 | slice | `library/game/gates/G2-slice.md` | accepted |
 | 8 | G2.5 | feature freeze | `library/game/gates/G2.5-feature-freeze.md` | pending |
 | 8 | G3 | ship | `library/game/gates/G3-ship.md` | pending |
 | 8 | E01 | small change | `library/core/evals/E01-small-change.md` | pending |
@@ -122,7 +122,8 @@ are ignored build outputs; `dist-play/` is the local playtest build.
 
 ## Current focus
 
-Batch 6 is assembled and the smoke test passes (`225 checks`, 0 failures):
-S10 slice, S11 content, S12 polish, S13 release, C01 prototype-crew. Batch 7 is
-next: C02 slice-crew, C03 release-crew, G0 concept brief, G1 fun, G2 slice. Do
-not start Batch 7 until Batch 6 is committed.
+Batch 6 is committed (`e2bd4a7`) and the smoke test passes (`225 checks`, 0
+failures): S10 slice, S11 content, S12 polish, S13 release, C01 prototype-crew.
+Batch 7 is accepted: C02 slice-crew, C03 release-crew, G0 concept brief, G1 fun,
+G2 slice; smoke `119 checks`, 0 failures. Batch 8 is next: G2.5, G3, E01, E02,
+E04. Do not start Batch 8 until Batch 7 is committed.
