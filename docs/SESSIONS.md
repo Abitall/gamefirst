@@ -17,6 +17,11 @@
 | R10 | technical-director | ses_dec91e12effetGaQrUev42acWM | accepted 2026-11-25 |
 | A01 | producer | ses_dec91e12dffeTTqKdFAGUVHMEv | accepted 2026-11-25 |
 | A04 | qa-lead | ses_dec91e12cffeOvClh42VBICato | accepted 2026-11-25 |
+| A02 | game-designer | ses_dec7af9baffeAR5YwNPtIU1Hkt | accepted 2026-11-25 |
+| A03 | lead-programmer | ses_dec7af9b9ffeLAoCOwSwKrQKLa | accepted 2026-11-25 |
+| S01 | general | ses_dec7af9b5ffe2oWb4uB4PImYEa | accepted 2026-11-25 |
+| S03 | producer | ses_dec7af9b4ffe1psxlTwtu2JN7Y | accepted 2026-11-25 |
+| S04 | technical-director | ses_dec7af9b4ffdy2oEi2NdAgPqiU | accepted 2026-11-25 |
 
 Review loop: up to 3 rounds per part. A part is accepted only after it passes
 `docs/REVIEW-RUBRIC.md` and its `JUSTIFICATION.md` and `SOURCES.md` are complete.

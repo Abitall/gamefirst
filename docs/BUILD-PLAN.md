@@ -32,11 +32,11 @@ eighty more parts.
 | 3 | R10 | Autonomy is contract | `library/core/rules/R10-autonomy-is-contract.md` | accepted |
 | 3 | A01 | partner | `library/core/agents/partner.md` | accepted |
 | 3 | A04 | critic | `library/core/agents/critic.md` | accepted |
-| 4 | A02 | designer | `library/core/agents/designer.md` | pending |
-| 4 | A03 | engineer | `library/core/agents/engineer.md` | pending |
-| 4 | S01 | research | `library/core/skills/research/SKILL.md` | pending |
-| 4 | S03 | retrospect | `library/core/skills/retrospect/SKILL.md` | pending |
-| 4 | S04 | import | `library/core/skills/import/SKILL.md` | pending |
+| 4 | A02 | designer | `library/core/agents/designer.md` | accepted |
+| 4 | A03 | engineer | `library/core/agents/engineer.md` | accepted |
+| 4 | S01 | research | `library/core/skills/research/SKILL.md` | accepted |
+| 4 | S03 | retrospect | `library/core/skills/retrospect/SKILL.md` | accepted |
+| 4 | S04 | import | `library/core/skills/import/SKILL.md` | accepted |
 | 5 | S05 | tool | `library/core/skills/tool/SKILL.md` | pending |
 | 5 | S06 | brainstorm | `library/game/skills/brainstorm/SKILL.md` | pending |
 | 5 | S07 | engine-choice | `library/game/skills/engine-choice/SKILL.md` | pending |
@@ -122,7 +122,7 @@ are ignored build outputs; `dist-play/` is the local playtest build.
 
 ## Current focus
 
-Batch 3 is assembled and the smoke test passes (78 checks, 0 failures).
-Batch 4: A02 designer, A03 engineer, S01 research, S03 retrospect, S04
-import. Do not start Batch 5 until Batch 4 is accepted and the ten rules plus
-two agents load together in a disposable game.
+Batch 4 is assembled and the smoke test passes (113 checks, 0 failures).
+Batch 5: S05 tool, S06 brainstorm, S07 engine-choice, S08 prototype, S09 gym.
+Do not start Batch 6 until Batch 5 is accepted and the four agents plus four
+skills load together in a disposable game.
