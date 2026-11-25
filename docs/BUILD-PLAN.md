@@ -92,11 +92,11 @@ eighty more parts.
 | 15 | D09 | guide/ | `template/docs/guide/README.md` | accepted |
 | 15 | D10 | decisions.ru.md | `template/decisions.ru.md` | accepted |
 | 15 | M01 | memory schema | `library/core/memory/MEMORY-SCHEMA.md` | accepted |
-| 16 | X01 | autonomy contract | `library/core/autonomy/CONTRACT.md` | pending |
-| 16 | X02 | security | `library/core/security/SECURITY.md` | pending |
-| 16 | X03 | versioning | `library/core/versioning/VERSIONING.md` | pending |
-| 16 | N00 | engine contract | `library/engines/CONTRACT.md` | pending |
-| 16 | N01 | engine-phaser | `library/engines/phaser/` | pending |
+| 16 | X01 | autonomy contract | `library/core/autonomy/CONTRACT.md` | running |
+| 16 | X02 | security | `library/core/security/SECURITY.md` | running |
+| 16 | X03 | versioning | `library/core/versioning/VERSIONING.md` | running |
+| 16 | N00 | engine contract | `library/engines/CONTRACT.md` | running |
+| 16 | N01 | engine-phaser | `library/engines/phaser/` | running |
 | 17 | N02 | engine-unity | `library/engines/unity/` | pending |
 | 17 | N03 | engine-godot | `library/engines/godot/` | pending |
 | 17 | P01 | release pack | `library/packs/release/` | pending |
