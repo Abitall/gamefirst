@@ -47,6 +47,11 @@
 | E07 | producer | ses_dec0828dbffeFkdoGl9Jh3nMAv | accepted |
 | E08 | qa-lead | ses_dec0828daffeQAn9OG7HvaLI2f | accepted |
 | E09 | game-designer | ses_dec0828d9ffecURf4gy2YAntEU | accepted |
+| E10 | technical-director | ses_debf40426ffdHnO8kkLQyxbf5M | running |
+| E11 | lead-programmer | ses_debf40426ffcG5DR4NLQYepqoV | running |
+| E12 | security-engineer | ses_debf40426ffb8IVarGgGN11gT7 | running |
+| CLI01 | tools-programmer | ses_debf40420ffeTc0Y6IwuQ4Ep38 | running |
+| CLI02 | tools-programmer | ses_debf4041dffeAQMr3gY056Mmva | running |
 
 Review loop: up to 3 rounds per part. A part is accepted only after it passes
 `docs/REVIEW-RUBRIC.md` and its `JUSTIFICATION.md` and `SOURCES.md` are complete.

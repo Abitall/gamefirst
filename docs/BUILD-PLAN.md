@@ -62,11 +62,11 @@ eighty more parts.
 | 9 | E07 | memory admission | `library/core/evals/E07-memory-admission.md` | accepted |
 | 9 | E08 | stop after three | `library/core/evals/E08-stop-after-three.md` | accepted |
 | 9 | E09 | fun honesty | `library/core/evals/E09-fun-honesty.md` | accepted |
-| 10 | E10 | context budget | `library/core/evals/E10-context-budget.md` | pending |
-| 10 | E11 | engine version | `library/core/evals/E11-engine-version.md` | pending |
-| 10 | E12 | release safety | `library/core/evals/E12-release-safety.md` | pending |
-| 10 | CLI01 | new-project | `tools/new-project.mjs` | pending |
-| 10 | CLI02 | status | `tools/status.mjs` | pending |
+| 10 | E10 | context budget | `library/core/evals/E10-context-budget.md` | running |
+| 10 | E11 | engine version | `library/core/evals/E11-engine-version.md` | running |
+| 10 | E12 | release safety | `library/core/evals/E12-release-safety.md` | running |
+| 10 | CLI01 | new-project | `tools/new-project.mjs` | running |
+| 10 | CLI02 | status | `tools/status.mjs` | running |
 | 11 | CLI03 | verify | `tools/verify.mjs` | pending |
 | 11 | CLI04 | eval | `tools/eval.mjs` | pending |
 | 11 | CLI05 | sync-agent | `tools/sync-agent.mjs` | pending |
