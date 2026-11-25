@@ -75,8 +75,8 @@ Review loop: up to 3 rounds per part. A part is accepted only after it passes
 | D04 | game-designer | ses_deba3f4e7ffe8Xs8PX4mrn8wTZ | accepted 2026-11-25 |
 | D05 | producer | ses_deba3f4e6ffedGYm0FD2GxO9o6 | accepted 2026-11-25 |
 | D06 | lead-programmer | ses_deba3f4e5ffeJFzHJqOz2nNxe4 | accepted 2026-11-25 |
-| D07 | qa-lead | ses_deb9258e9ffeJGgN12rlbLGuLx | running |
-| D08 | engine-programmer | ses_deb9258e8ffeDezP3e0RyX1rO3 | running |
-| D09 | producer | ses_deb9258e2ffeXACL8wSxcK4owX | running |
-| D10 | producer | ses_deb9258e1ffe4jitIiEDoYTenF | running |
-| M01 | technical-director | ses_deb9258e0ffeznwO2rpCFEgQvN | running |
+| D07 | qa-lead | ses_deb9258e9ffeJGgN12rlbLGuLx | accepted 2026-11-25 |
+| D08 | engine-programmer | ses_deb9258e8ffeDezP3e0RyX1rO3 | accepted 2026-11-25 |
+| D09 | producer | ses_deb9258e2ffeXACL8wSxcK4owX | accepted 2026-11-25 |
+| D10 | producer | ses_deb9258e1ffe4jitIiEDoYTenF | accepted 2026-11-25 |
+| M01 | technical-director | ses_deb9258e0ffeznwO2rpCFEgQvN | accepted 2026-11-25 |

@@ -27,5 +27,5 @@ the engine pack in `docs/engine/`; the core has no engine.
 - `src/game/` - the engine adapter, the only place that imports the engine.
 - `evidence/`, `runs/` - proof of done and the autonomy log.
 
-`BRIEF.md`, `STATE.md`, `DECISIONS.md`, `GAME.md`, and `BACKLOG.md` sit at the
-repo root.
+`BRIEF.md`, `STATE.md`, `DECISIONS.md`, `GAME.md`, `TASTE.md`, `BACKLOG.md`, and
+`decisions.ru.md` sit at the repo root.
