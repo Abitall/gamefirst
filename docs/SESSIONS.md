@@ -42,6 +42,11 @@
 | E01 | lead-programmer | ses_dec1c2ce6ffe3lumngAwt2FZXH | accepted 2026-11-25 |
 | E02 | technical-director | ses_dec1c2ce5ffeH6C23Kr8zdXZ4P | accepted 2026-11-25 |
 | E04 | qa-lead | ses_dec1c2ce4ffeNgBPuDKXRooYYy | accepted 2026-11-25 |
+| E05 | security-engineer | ses_dec0828e2ffeLFTZg1lRwnazTs | running |
+| E06 | producer | ses_dec0828e1ffe4dXDZJ63w4Aksq | running |
+| E07 | producer | ses_dec0828dbffeFkdoGl9Jh3nMAv | running |
+| E08 | qa-lead | ses_dec0828daffeQAn9OG7HvaLI2f | running |
+| E09 | game-designer | ses_dec0828d9ffecURf4gy2YAntEU | running |
 
 Review loop: up to 3 rounds per part. A part is accepted only after it passes
 `docs/REVIEW-RUBRIC.md` and its `JUSTIFICATION.md` and `SOURCES.md` are complete.
