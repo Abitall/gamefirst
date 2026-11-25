@@ -161,5 +161,7 @@ Batch 14 is committed (`311e4a1`) and the smoke test passes (`407 checks`, 0
 failures): D02 `STATE.md`, D03 `DECISIONS.md`, D04 `GAME.md`+`TASTE.md`, D05
 `BACKLOG.md`, D06 `SYSTEM-CARD.md`. Batch 15 is accepted: D07 playtest note,
 D08 engine doc, D09 guide, D10 Russian decisions digest, M01 memory schema.
-Batch 16 is accepted: X01 autonomy contract, X02 security, X03 versioning, N00 engine contract, N01 Phaser pack.
-Current focus: Batch 17, N02 Unity pack, N03 Godot pack, packs.
+Batch 16 is committed (`1fda73d`) and accepted: X01 autonomy contract, X02
+security, X03 versioning, N00 engine contract, N01 Phaser pack. Smoke test
+passes (`390 checks`, 0 failures). Current focus: Batch 17, N02 Unity pack, N03
+Godot pack, packs.
