@@ -31,6 +31,7 @@
     { "action": "shell", "resource": "git clean -f *", "effect": "deny" },
     { "action": "shell", "resource": "git push *", "effect": "deny" },
     { "action": "shell", "resource": "gh release create *", "effect": "deny" },
+    { "action": "shell", "resource": "npm publish *", "effect": "deny" },
     { "action": "shell", "resource": "gh repo delete *", "effect": "deny" },
     { "action": "external_directory", "resource": "*", "effect": "ask" }
   ]
