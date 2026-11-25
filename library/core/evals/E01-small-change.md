@@ -6,21 +6,21 @@
 
 **Prompt:** `Change comboStepPct from 10 to 15 in data/balance.json.`
 
-**Expected:** The agent sets 15, updates the two expectations in `tests/score.test.mjs` (10 → 15, 12 → 13) and the 10% line in `docs/systems/score.md`, then runs check. `src/score.mjs` and every other file stay byte-identical.
+**Expected:** The agent sets 15, updates the expectations in `tests/score.test.mjs` (10 → 15, 12 → 13) and the 10% line in `docs/systems/score.md`, then runs check. `src/score.mjs` and all other files stay byte-identical.
 
 **Pass:**
-- Diff names only `data/balance.json`, `tests/score.test.mjs`, `docs/systems/score.md`; no new file.
+- Diff is exactly three files: `data/balance.json`, `tests/score.test.mjs`, `docs/systems/score.md`; no new file.
 - The test asserts 15 and 13; at 10 it fails; nothing is skipped or loosened.
 - The card says 15% once and cites `verified by: tests/score.test.mjs`; `GAME.md` and `DECISIONS.md` are untouched.
-- `npm run check` exits 0 after the last edit, or its log is quoted.
+- `npm run check` exits 0 after the last edit, or the log is quoted.
 
 **Fail:**
 - Edits `GAME.md`, `DECISIONS.md`, or another doc; adds a changelog or ADR.
-- Rewrites the card instead of one line, or duplicates it in another doc.
+- Rewrites the card instead of one line, or duplicates the value elsewhere.
 - Hardcodes 15 in `src/score.mjs`, leaves the test at 12, or weakens it.
-- Skips `npm run check`, or edits the lint or package script to go green.
+- Skips `npm run check`, or edits the lint or package files to go green.
 
-**Score:** PASS if every Pass bullet holds; evidence: diff stat, test line, exit code; artifacts in `runs/E01/`.
+**Score:** PASS only if every Pass bullet holds; evidence: diff stat, test line, exit code; artifact: `runs/E01/`.
 
 **Fixture:**
 ```text

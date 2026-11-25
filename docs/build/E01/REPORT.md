@@ -28,19 +28,19 @@ Design choices:
 
 ## Size
 
-- Characters: 1966. Words: 288. Estimated tokens: 491.5 (characters / 4).
-- Threshold: 500 tokens for an eval. Status: within, 8.5 tokens of headroom.
+- Characters: 1977. Words: 288. Estimated tokens: 494.25 (characters / 4).
+- Threshold: 500 tokens for an eval. Status: within, 5.75 tokens of headroom.
 - Lines: 43 (target 35–45).
-- Encoding: UTF-8 without BOM, 2026 bytes, LF only, zero CRLF, POSIX paths.
-- The first draft was 2531 characters (~633 tokens); Setup, Expected, two
-  Pass bullets and the fixture comments were tightened, and the config move
-  added a tree line without adding prose.
+- Encoding: UTF-8 without BOM, 2037 bytes, LF only, zero CRLF, POSIX paths.
+- The first draft was 2531 bytes (~620 tokens); Setup, Expected, several
+  Pass/Fail bullets and the fixture comments were tightened, and the config
+  move added a tree line without adding prose.
 
 ## Checks
 
 | # | Check | Method | Result |
 |---|---|---|---|
-| 1 | Size under 500 tokens | `wc`-style count, characters / 4 | PASS — 1966 chars, ~491.5 |
+| 1 | Size under 500 tokens | `wc`-style count, characters / 4 | PASS - 1977 chars, ~494.25 |
 | 2 | Line count 35–45 | split on LF | PASS — 43 |
 | 3 | Format matches E03/E02 | section-by-section read | PASS — title, Tests, Setup, Prompt, Expected, Pass, Fail, Score, Fixture, Runner, Links |
 | 4 | Pass names the three files and one doc | read | PASS — `data/balance.json`, `tests/score.test.mjs`, `docs/systems/score.md` |
@@ -57,9 +57,9 @@ Design choices:
 |---|---|---|
 | 1 Necessity | PASS | Every unit is in `JUSTIFICATION.md` with a removal consequence. |
 | 2 Function | PASS | Trigger: a tuning request arrives. Input: the fixture and one prompt. Output: a diff, a test line, a check log. Done: every Pass bullet. Failure: any Fail bullet; a blocked run is a FAIL with the log quoted. Scope: change locality, not code quality. |
-| 3 Evidence | PASS | Nine sources, 4/3/2, each with URL, exact stars on 2026-11-25, license, artifact, borrow, reject; dead ends listed. |
+| 3 Evidence | PASS | Nine sources, 4/3/2, each with URL, stars as read on 2026-11-25, license, artifact, borrow, reject; dead ends listed. |
 | 4 Blueprint fit | PASS | Core layer, engine-agnostic, no project content, uses R5/R6/D03/D06/CLI03; matches E01 "A tuning change touches at most two documents." |
-| 5 Size | PASS | ~491.5 tokens against the 500 threshold; 8.5 tokens of headroom. |
+| 5 Size | PASS | ~494.25 tokens against the 500 threshold; 5.75 tokens of headroom. |
 | 6 Language and encoding | PASS | English, UTF-8 no BOM, LF, POSIX paths, Windows-safe names. |
 | 7 Security | PASS | No secrets, no network, no publish; the fixture is local and read-only outside its scratch copy. |
 | 8 Testability | PASS | One binary verdict; the diff stat, test line and exit code are the evidence; failure names the file. |
@@ -92,7 +92,7 @@ Design choices:
   `comboBonus(base, combo)` with a hardcoded step; E01 uses `score(base, combo)`
   with a config. The fixtures must be built separately and not merged.
 - Phaser (40,779) was last pushed 2026-08-21, the least current source. It was
-  kept for JSDoc-in-source, which no other gamedev source shows as directly.
+  kept because JSDoc-in-source is the model closest to this TypeScript project.
 - The ADR repository is non-commercial licensed; only its one-sentence
   definition was read and quoted, with no template reuse.
 - Star counts are the values served on 2026-11-25 and will drift.

@@ -9,7 +9,7 @@ has 10 rules, 4 agents, 13 skills, 3 crews, 5 gates, and 4 evals.
 |---|---|---:|---:|---:|---:|---|
 | G2.5 | `library/game/gates/G2.5-feature-freeze.md` | 1,767 | 441.75 | 441.5 | 500 | 9 (4/3/2) |
 | G3 | `library/game/gates/G3-ship.md` | 1,706 | 426.5 | 426.0 | 500 | 9 (4/3/2) |
-| E01 | `library/core/evals/E01-small-change.md` | 1,966 | 491.5 | 477.0 | 500 | 9 (4/3/2) |
+| E01 | `library/core/evals/E01-small-change.md` | 1,977 | 494.25 | 477.0 | 500 | 9 (4/3/2) |
 | E02 | `library/core/evals/E02-no-invented-api.md` | 1,971 | 492.75 | 475.2 | 500 | 9 (4/3/2) |
 | E04 | `library/core/evals/E04-question-budget.md` | 1,971 | 493.0 | 475.2 | 500 | 9 (4/3/2) |
 
@@ -23,7 +23,7 @@ has 10 rules, 4 agents, 13 skills, 3 crews, 5 gates, and 4 evals.
   clauses; accepted, not rewritten.
 - **E01** — the tuning value moved to `data/balance.json`; the eval now measures
   diff discipline, not a hardcoded edit. First draft was 2,531 chars/633 tokens;
-  tightened to 1,966/491.5.
+  tightened to 1,977/494.25.
 - **E02** — the Score line now accepts a legal blocked run (`call or block`), so
   the Expected and Score sections no longer contradict. GUT was removed as
   unverified; Terminal-Bench is recorded as considered/rejected.
