@@ -22,6 +22,11 @@
 | S01 | general | ses_dec7af9b5ffe2oWb4uB4PImYEa | accepted 2026-11-25 |
 | S03 | producer | ses_dec7af9b4ffe1psxlTwtu2JN7Y | accepted 2026-11-25 |
 | S04 | technical-director | ses_dec7af9b4ffdy2oEi2NdAgPqiU | accepted 2026-11-25 |
+| S05 | lead-programmer | ses_dec5bc83dffeT2OuOZonISJl27 | accepted 2026-11-25 |
+| S06 | game-designer | ses_dec5bc83dffdGWMsSfirl7qyh8 | accepted 2026-11-25 |
+| S07 | technical-director | ses_dec5bc839ffeH1YtK3pt7rB1ut | accepted 2026-11-25 |
+| S08 | game-designer | ses_dec5bc838ffeuU4QjqFjuplvD0 | accepted 2026-11-25 |
+| S09 | game-designer | ses_dec5bc838ffdr1WRVVMmcvvxiW | accepted 2026-11-25 |
 
 Review loop: up to 3 rounds per part. A part is accepted only after it passes
 `docs/REVIEW-RUBRIC.md` and its `JUSTIFICATION.md` and `SOURCES.md` are complete.

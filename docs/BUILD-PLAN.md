@@ -37,11 +37,11 @@ eighty more parts.
 | 4 | S01 | research | `library/core/skills/research/SKILL.md` | accepted |
 | 4 | S03 | retrospect | `library/core/skills/retrospect/SKILL.md` | accepted |
 | 4 | S04 | import | `library/core/skills/import/SKILL.md` | accepted |
-| 5 | S05 | tool | `library/core/skills/tool/SKILL.md` | pending |
-| 5 | S06 | brainstorm | `library/game/skills/brainstorm/SKILL.md` | pending |
-| 5 | S07 | engine-choice | `library/game/skills/engine-choice/SKILL.md` | pending |
-| 5 | S08 | prototype | `library/game/skills/prototype/SKILL.md` | pending |
-| 5 | S09 | gym | `library/game/skills/gym/SKILL.md` | pending |
+| 5 | S05 | tool | `library/core/skills/tool/SKILL.md` | accepted |
+| 5 | S06 | brainstorm | `library/game/skills/brainstorm/SKILL.md` | accepted |
+| 5 | S07 | engine-choice | `library/game/skills/engine-choice/SKILL.md` | accepted |
+| 5 | S08 | prototype | `library/game/skills/prototype/SKILL.md` | accepted |
+| 5 | S09 | gym | `library/game/skills/gym/SKILL.md` | accepted |
 | 6 | S10 | slice | `library/game/skills/slice/SKILL.md` | pending |
 | 6 | S11 | content | `library/game/skills/content/SKILL.md` | pending |
 | 6 | S12 | polish | `library/game/skills/polish/SKILL.md` | pending |
@@ -122,7 +122,7 @@ are ignored build outputs; `dist-play/` is the local playtest build.
 
 ## Current focus
 
-Batch 4 is assembled and the smoke test passes (113 checks, 0 failures).
-Batch 5: S05 tool, S06 brainstorm, S07 engine-choice, S08 prototype, S09 gym.
-Do not start Batch 6 until Batch 5 is accepted and the four agents plus four
+Batch 5 is assembled and the smoke test passes (179 checks, 0 failures).
+Batch 6: S10 slice, S11 content, S12 polish, S13 release, C01 prototype-crew.
+Do not start Batch 6 until Batch 5 is committed and the four agents plus nine
 skills load together in a disposable game.
