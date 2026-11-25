@@ -52,11 +52,11 @@
 | E12 | security-engineer | ses_debf40426ffb8IVarGgGN11gT7 | accepted 2026-11-25 |
 | CLI01 | tools-programmer | ses_debf40420ffeTc0Y6IwuQ4Ep38 | accepted 2026-11-25 |
 | CLI02 | tools-programmer | ses_debf4041dffeAQMr3gY056Mmva | accepted 2026-11-25 |
-| CLI03 | tools-programmer | ses_debd7ecf9ffevOnaB8mDTFoDQm | running |
-| CLI04 | tools-programmer | ses_debd7ecf8ffe4Apv4fH7cnWoSl | running |
-| CLI05 | tools-programmer | ses_debd7ecefffeDy7272hu1abBIq | running |
-| CLI06 | tools-programmer | ses_debd7eceeffeknNJn198Bl8Mku | running |
-| CLI07 | tools-programmer | ses_debd7ececffe425xRB6ubtU01K | running |
+| CLI03 | tools-programmer | ses_debd7ecf9ffevOnaB8mDTFoDQm | accepted 2026-11-25 |
+| CLI04 | tools-programmer | ses_debd7ecf8ffe4Apv4fH7cnWoSl | accepted 2026-11-25 |
+| CLI05 | tools-programmer | ses_debd7ecefffeDy7272hu1abBIq | accepted 2026-11-25 |
+| CLI06 | tools-programmer | ses_debd7eceeffeknNJn198Bl8Mku | accepted 2026-11-25 |
+| CLI07 | tools-programmer | ses_debd7ececffe425xRB6ubtU01K | accepted 2026-11-25 |
 
 Review loop: up to 3 rounds per part. A part is accepted only after it passes
 `docs/REVIEW-RUBRIC.md` and its `JUSTIFICATION.md` and `SOURCES.md` are complete.

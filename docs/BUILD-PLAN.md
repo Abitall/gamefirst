@@ -67,11 +67,11 @@ eighty more parts.
 | 10 | E12 | release safety | `library/core/evals/E12-release-safety.md` | accepted |
 | 10 | CLI01 | new-project | `tools/new-project.mjs` | accepted |
 | 10 | CLI02 | status | `tools/status.mjs` | accepted |
-| 11 | CLI03 | verify | `tools/verify.mjs` | running |
-| 11 | CLI04 | eval | `tools/eval.mjs` | running |
-| 11 | CLI05 | sync-agent | `tools/sync-agent.mjs` | running |
-| 11 | CLI06 | upgrade | `tools/upgrade.mjs` | running |
-| 11 | CLI07 | doctor | `tools/doctor.mjs` | running |
+| 11 | CLI03 | verify | `tools/verify.mjs` | accepted |
+| 11 | CLI04 | eval | `tools/eval.mjs` | accepted |
+| 11 | CLI05 | sync-agent | `tools/sync-agent.mjs` | accepted |
+| 11 | CLI06 | upgrade | `tools/upgrade.mjs` | accepted |
+| 11 | CLI07 | doctor | `tools/doctor.mjs` | accepted |
 | 12 | CLI08 | lint-agent-context | `tools/lint-agent-context.mjs` | pending |
 | 12 | CLI09 | trigger-check | `tools/trigger-check.mjs` | pending |
 | 12 | CLI10 | capture | `tools/capture.mjs` | pending |
@@ -111,6 +111,23 @@ eighty more parts.
 `agent.lock.json`, so the game repo has no `VERSION` file. `dist/` and `dist-play/`
 are ignored build outputs; `dist-play/` is the local playtest build.
 
+## Research protocol
+
+Three research budgets, decided 2026-11-25:
+
+- **Deep parts** (rules, skills, evals, security X02, engine packs N01-N03):
+  9 sources (4 gamedev / 3 SWE / 2 AI-agent), full justification per unit.
+  These facts are version-specific or safety-critical, and a wrong line is
+  expensive.
+- **Medium parts** (memory M01, autonomy X01, engine contract N00): 5 sources
+  (3 external + 2 accepted internal artifacts), full justification per unit,
+  and a fixture or selftest that proves the convention. These are our formats,
+  not external facts.
+- **Thin parts** (versioning X03, slash commands and document templates):
+  3 sources (2 external + 1 accepted internal artifact), a consistency table of
+  the IDs they call, and one check that the command/document resolves. No
+  padded `SOURCES.md`; every line still needs a reason.
+
 ## Assembly and review
 
 1. Copy accepted `staging/<ID>/artifact/` into the target path.
@@ -132,5 +149,8 @@ question budget. Batch 9 is committed (`75a5533`) and the smoke test passes
 (`194 checks`, 0 failures): E05 prompt injection, E06 scope guard, E07 memory
 admission, E08 stop after three failures, E09 fun honesty. Batch 10 is accepted
 and assembled (`224 checks`, 0 failures): E10 context budget, E11 engine
-version, E12 release safety, CLI01 new-project, CLI02 status. Batch 11 is next:
-CLI03 verify, CLI04 eval, CLI05 sync-agent, CLI06 upgrade, CLI07 doctor.
+version, E12 release safety, CLI01 new-project, CLI02 status. Batch 11 is
+assembled and the smoke test passes (`271 checks`, 0 failures): CLI03 verify,
+CLI04 eval, CLI05 sync-agent, CLI06 upgrade, CLI07 doctor. Batch 12 is next:
+CLI08 lint-agent-context, CLI09 trigger-check, CLI10 capture, SL01 `/start`,
+SL02 `/status`.
