@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 // doctor.mjs - read-only health check for a gamefirst game repository.
 // Usage: node tools/doctor.mjs [game-dir] [--json] [--strict] [--help]
-// Checks links, lock parts, .opencode files, encoding, Windows paths,
-// placeholders, verify recipe and permissions. No writes, no network, no fix.
+// Checks links, lock parts, host files, encoding, Windows paths,
+// placeholders, verify recipe and host settings. No writes, no network, no fix.
 
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { extname, join, relative, resolve, sep } from 'node:path';
@@ -10,9 +10,9 @@ import { extname, join, relative, resolve, sep } from 'node:path';
 const USAGE = `gamefirst doctor - read-only health check for a game repository
 Usage: node tools/doctor.mjs [game-dir] [--json] [--strict] [--help]
 
-Checks: links in AGENTS.md/README.md; agent.lock.json parts; .opencode files;
-UTF-8 without BOM; LF endings; backslash paths; {{ placeholders;
-project.config.json verify recipe; opencode.json permission actions.
+Checks: links in AGENTS.md/README.md/CLAUDE.md; agent.lock.json parts; host
+files; UTF-8 without BOM; LF endings; backslash paths; {{ placeholders;
+project.config.json verify recipe; host settings.
 
 Options:
   --json     one JSON object (schema 1)
@@ -27,7 +27,7 @@ const SKIP = new Set(['.git', 'node_modules', 'dist', 'dist-play', 'coverage', '
 const ACTIONS = new Set(['read', 'glob', 'grep', 'webfetch', 'websearch', 'edit', 'shell', 'external_directory']);
 const EFFECTS = new Set(['allow', 'ask', 'deny']);
 const KINDS = new Set(['rule', 'agent', 'skill', 'crew', 'gate', 'eval']);
-const DOCS = new Set(['AGENTS.md', 'README.md']);
+const DOCS = new Set(['AGENTS.md', 'README.md', 'CLAUDE.md']);
 const SEMVER = /^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/;
 const LINK = /\[[^\]]*\]\(([^)\s]+)(?:\s+["'][^"']*["'])?\)/g;
 const CODE = /`([^`\n]+)`/g;
@@ -102,9 +102,9 @@ function scanText(add, root, file) {
     scanMarkdown(add, root, rel, file, text);
     for (const match of text.matchAll(CODE)) {
       const span = match[1].trim();
-      if (!span.startsWith('.opencode/') || span.includes('*')) continue;
+      if (!/^\.(?:opencode|agents|claude)\//.test(span) || span.includes('*')) continue;
       const target = span.endsWith('/') ? span.slice(0, -1) : span;
-      if (!existsSync(join(root, ...target.split('/')))) add('error', 'opencode', rel, lineOf(text, match.index), `${span} is cited but missing`);
+      if (!existsSync(join(root, ...target.split('/')))) add('error', 'host', rel, lineOf(text, match.index), `${span} is cited but missing`);
     }
   }
 }
@@ -195,8 +195,8 @@ function checkOpencode(add, root, locked) {
 }
 function checkProject(add, root) {
   const loaded = loadJson(add, root, 'project.config.json', 'config');
-  if (loaded.missing) { add('error', 'config', 'project.config.json', 0, 'not found; N00 creates it'); return; }
-  if (loaded.invalid) return;
+  if (loaded.missing) { add('error', 'config', 'project.config.json', 0, 'not found; N00 creates it'); return null; }
+  if (loaded.invalid) return null;
   const data = loaded.data && typeof loaded.data === 'object' ? loaded.data : {};
   const recipe = data.verify && data.verify.recipe;
   if (!Array.isArray(recipe) || recipe.length === 0) {
@@ -204,6 +204,32 @@ function checkProject(add, root) {
     else add('error', 'config', 'project.config.json', 0, 'verify recipe is missing or empty');
   }
   else if (recipe.some((step) => typeof step !== 'string' && (typeof step !== 'object' || step === null))) add('warn', 'config', 'project.config.json', 0, 'verify recipe step is neither a string nor an object');
+  return data;
+}
+
+function detectHost(root, config) {
+  if (config && ['opencode', 'codex', 'claude'].includes(config.host)) return config.host;
+  if (existsSync(join(root, '.agents'))) return 'codex';
+  if (existsSync(join(root, '.claude'))) return 'claude';
+  return 'opencode';
+}
+
+function checkHost(add, root, locked, config) {
+  const host = detectHost(root, config);
+  if (host === 'opencode') { checkOpencode(add, root, locked); return; }
+  const dir = host === 'codex' ? '.agents' : '.claude';
+  if (!existsSync(join(root, dir))) { add('error', 'host', dir, 0, `${dir} directory not found; CLI01 installs parts there`); return; }
+  if (locked) {
+    for (const file of walk(join(root, dir))) {
+      const rel = posix(relative(root, file));
+      if (rel === `${dir}/README.md` || rel.startsWith(`${dir}/commands/`)) continue;
+      if (file.endsWith('.md') && !locked.has(rel)) add('warn', 'host', rel, 0, 'not in agent.lock.json; run sync-agent or remove it');
+    }
+  }
+  if (host === 'claude') {
+    const settings = loadJson(add, root, '.claude/settings.json', 'host');
+    if (settings.missing) add('warn', 'host', '.claude/settings.json', 0, 'settings not found; permissions fall back to host defaults');
+  }
 }
 function build(root) {
   const items = [];
@@ -214,8 +240,8 @@ function build(root) {
     if (!existsSync(join(root, name))) add(level, 'docs', name, 0, `${name} not found`);
   }
   const locked = checkLock(add, root);
-  checkOpencode(add, root, locked);
-  checkProject(add, root);
+  const config = checkProject(add, root);
+  checkHost(add, root, locked, config);
   const errors = items.filter((item) => item.level === 'error');
   const warnings = items.filter((item) => item.level === 'warn');
   return { root, files: files.length, items, errors, warnings };

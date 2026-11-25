@@ -18,14 +18,14 @@ Version: `0.3.0-dev`.
   decision. A part is accepted only when it runs.
 - Documents are written after the code proves the behaviour. A system card is
   one page and cites the test that verifies it.
-- Gates are one-line human decisions, not reports: `G1` fun, `G2` slice,
-  `G2.5` freeze, `G3` ship.
+- Gates are one-line human decisions, not reports: `G1` fun, `G2` slice and
+  `G3` ship; `G0` brief and `G2.5` freeze are checkpoints.
 - Autonomy is a written contract in `STATE.md`, not a mode switch.
 
 ## Requirements
 
 - Node.js 20 or newer (the tools use only the standard library).
-- An OpenCode build that understands the V2 `permissions` array.
+- One host: OpenCode (V2 `permissions`), Codex, or Claude Code.
 - Git is optional; `--git` initialises the game repository.
 - Windows, macOS, and Linux. Paths in documents are POSIX-style; the tools
   accept Windows paths.
@@ -40,6 +40,7 @@ gamefirst/
 │   ├── game/        # crews and gates for the game pipeline
 │   ├── engines/     # N00 contract, phaser/unity/godot packs (beta, docs+recipes)
 │   └── packs/       # release, obsidian, art, audio, narrative, localization, marketing
+├── hosts/           # OpenCode/Codex/Claude Code layout and settings adapters
 ├── tools/           # new-project, status, verify, eval, sync, upgrade, doctor, lint, trigger, capture
 ├── docs/            # blueprint, build plan, review rubric, session log
 └── examples/        # reserved for worked examples
@@ -49,7 +50,10 @@ A generated game looks like this:
 
 ```text
 my-game/
-├── .opencode/       # installed core and game parts, commands, permissions
+├── .opencode/       # OpenCode host (only with --host opencode)
+├── .agents/         # Codex host (only with --host codex)
+├── .claude/         # Claude Code host (only with --host claude)
+├── CLAUDE.md        # Claude Code entry point (only with --host claude)
 ├── src/systems/     # engine-free game logic
 ├── src/data/        # data tables and tuning
 ├── src/game/        # the only engine adapter
@@ -72,16 +76,20 @@ my-game/
 From this checkout:
 
 ```bash
-node tools/new-project.mjs ../my-game --name "My Game" --git
-cd ../my-game
+# OpenCode (default)
+node tools/new-project.mjs ../my-game --name "My Game" --host opencode --git
+
+# Codex
+node tools/new-project.mjs ../my-game --name "My Game" --host codex --git
+
+# Claude Code
+node tools/new-project.mjs ../my-game --name "My Game" --host claude --git
 ```
 
-Open `my-game` in OpenCode and run:
+The flag changes only the host layout; rules, skills, gates and documents are
+shared.
 
-```text
-/start
-```
-
+Open `my-game` in the chosen host and run `/start` (or `$start` on Codex).
 `/start` reads the five core files, recommends a mode, and names the first
 missing decision. Then:
 
@@ -91,31 +99,51 @@ missing decision. Then:
 /verify    # run the project's build/test recipe and write evidence
 ```
 
+On Codex, invoke the same commands as `$next`, `$status`, `$verify`, `$retro`,
+`$help`.
+
 The first useful milestone is a playable core loop, not a document. Use
 `/retro` after a loop or a failed attempt to record one change.
 
 ## Commands
 
-| Command | What it does |
-|---|---|
-| `/start` | reads the project, recommends a mode, names the first missing file |
-| `/status` | prints phase, active part, gate, next action, blockers |
-| `/next` | prints the one next action and why |
-| `/verify` | runs `verify.recipe`, records evidence, never fixes |
-| `/retro` | writes the five-line retro under `docs/retro/` |
-| `/help` | one-screen map of the project and commands |
+| Command | OpenCode / Claude Code | Codex | What it does |
+|---|---|---|---|
+| `start` | `/start` | `$start` | reads the project, recommends a mode, names the first missing file |
+| `status` | `/status` | `$status` | prints phase, active part, gate, next action, blockers |
+| `next` | `/next` | `$next` | prints the one next action and why |
+| `verify` | `/verify` | `$verify` | runs `verify.recipe`, records evidence, never fixes |
+| `retro` | `/retro` | `$retro` | writes the five-line retro under `docs/retro/` |
+| `help` | `/help` | `$help` | one-screen map of the project and commands |
+
+## Hosts
+
+One source, three layouts:
+
+- **OpenCode** — `.opencode/` plus `opencode.json` with the V2 permissions
+  array and `default_agent`.
+- **Codex** — `.agents/` with rules, skills, roles, crews and gates; the six
+  commands are installed as skills and invoked as `$start`, `$next`, and so on.
+  Codex has no custom subagent files, so A04 critic is a separate read-only
+  pass.
+- **Claude Code** — `.claude/` with rules, skills, subagents, crews, gates and
+  commands, plus `CLAUDE.md` and `.claude/settings.json`.
+
+`status`, `verify` and `doctor` work in all three. `sync-agent` and `upgrade`
+remain OpenCode-first in v0.3. See [hosts/README.md](hosts/README.md) for the
+scope of the adapter.
 
 ## Tools
 
 | Tool | Purpose |
 |---|---|
-| `new-project.mjs` | create a game repository from the template + core/game |
+| `new-project.mjs` | create a game repository for OpenCode, Codex or Claude Code |
 | `status.mjs` | read-only snapshot of `STATE.md`, `BACKLOG.md`, `agent.lock.json` |
 | `verify.mjs` | run the recipe in `project.config.json`, write `evidence/` |
 | `eval.mjs` | run deterministic eval fixtures against a game |
 | `sync-agent.mjs` | pull/push/diff library parts through `agent.lock.json` |
 | `upgrade.mjs` | dry-run, diff, then apply a framework upgrade |
-| `doctor.mjs` | read-only health check for links, encoding, placeholders, permissions |
+| `doctor.mjs` | read-only health check for links, encoding, placeholders, host settings |
 | `lint-agent-context.mjs` | check token budgets and instruction priority |
 | `trigger-check.mjs` | lexical check that skills/agents are selectable |
 | `capture.mjs` | screenshot a running game into `evidence/` |
@@ -149,11 +177,12 @@ fixture is runnable; a green run means checks actually ran. The same is true for
 node tools/sync-agent.mjs diff ../my-game
 node tools/upgrade.mjs ../my-game --dry-run
 node tools/upgrade.mjs ../my-game --apply
-node tools/doctor.mjs ../my-game --strict
+node tools/doctor.mjs ../my-game
 ```
 
 `upgrade` writes `docs/UPGRADE-<from>-to-<to>.md`; `doctor` is read-only and
-returns a non-zero exit on errors. In v0.3 `upgrade --apply` overwrites changed
+returns a non-zero exit on errors. On a fresh project the empty `verify.recipe`
+is an expected warning; use `--strict` after an engine is chosen. In v0.3 `upgrade --apply` overwrites changed
 parts without a three-way merge: commit or back up a game before applying it,
 especially if you edited rules or skills by hand.
 
@@ -174,6 +203,10 @@ The framework was assembled one part at a time; each accepted part has its
 ## Limits in v0.3
 
 - Engine and domain packs are not installed by `new-project`.
+- `new-project` does not create a runnable app: no `package.json`, no
+  `index.html`, and the default `verify.recipe` is empty until an engine is
+  chosen.
+- `sync-agent` and `upgrade` are OpenCode-first in v0.3.
 - Unity and Godot packs are beta; their pitfalls need runtime reproduction.
 - Command execution is covered by structural checks, not a live software
   runtime.
@@ -185,4 +218,6 @@ The framework was assembled one part at a time; each accepted part has its
 - [Blueprint](docs/V0.3-BLUEPRINT.md) — what exists and why.
 - [Build plan](docs/BUILD-PLAN.md) — every part and its status.
 - [Review rubric](docs/REVIEW-RUBRIC.md) — how a part is accepted.
+- [Russian guide](GUIDE.ru.md) — how to start a project step by step.
 - [Russian quick start](docs/QUICKSTART.ru.md) — one page for the human.
+- [Host adapters](hosts/README.md) — OpenCode, Codex, Claude Code.

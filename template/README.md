@@ -5,11 +5,11 @@ where documents describe what already works, never what might.
 
 ## Start
 
-1. Open the repo in OpenCode. `AGENTS.md` is the project contract.
+1. Open the repo in {{HOST_NAME}}. `AGENTS.md` is the project contract.
 2. Read `STATE.md` for the mode, phase, and next action, and `BRIEF.md` for the
    idea and its success test.
 3. Run `/start` when you do not know where to begin, or `/next` for the next
-   action.
+   action. On a skill-based host invoke `$start` and `$next` instead.
 
 ## Verify
 

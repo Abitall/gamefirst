@@ -1,8 +1,8 @@
 # {{GAME_NAME}}
 
-One game, one repo, built with gamefirst v0.3. Playable first: a mechanic is
-real when it runs, not when it is described. One page per document, one fact in
-one place.
+One game, one repo, built with gamefirst v0.3 on {{HOST_NAME}}. Playable first:
+a mechanic is real when it runs, not when it is described. One page per
+document, one fact in one place.
 
 ## Modes
 
@@ -12,9 +12,9 @@ recorded in `STATE.md`; state it when it changes. On conflict:
 
 ## Parts
 
-Rules `R1-R10` live in `.opencode/rules/`, skills `S01-S13` in
-`.opencode/skills/`, agents `A01-A04` in `.opencode/agents/`. Open the part a
-task names; never restate it here. Load only the parts in use.
+Rules `R1-R10` live in `{{HOST_RULES_DIR}}/`, skills `S01-S13` in
+`{{HOST_SKILLS_DIR}}/`, agents `A01-A04` in `{{HOST_AGENTS_DIR}}/`. Open the part
+a task names; never restate it here. Load only the parts in use.
 
 ## Non-negotiables
 

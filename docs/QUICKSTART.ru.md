@@ -7,27 +7,55 @@ gamefirst — маленький фреймворк для соло-разраб
 ## Что нужно
 
 - Node.js 20 или новее.
-- OpenCode, который понимает V2-массив `permissions`.
+- Один агент: OpenCode, Codex или Claude Code.
 - Git — по желанию.
 - Windows, macOS или Linux.
 
-## Создать игру
+## Установка для трёх агентов
 
-Из папки `gamefirst`:
+Создай игру из папки `gamefirst`.
+
+**OpenCode** — родной хост:
 
 ```bash
-node tools/new-project.mjs ../my-game --name "Моя игра" --git
+node tools/new-project.mjs ../my-game --name "Моя игра" --host opencode --git
 cd ../my-game
 ```
 
-Открой `my-game` в OpenCode и напиши:
+Открой `my-game` в OpenCode и напиши `/start`.
 
-```text
-/start
+**Codex**:
+
+```bash
+node tools/new-project.mjs ../my-game --name "Моя игра" --host codex --git
+cd ../my-game
 ```
 
-`/start` прочитает пять файлов, предложит режим и назовёт первый недостающий
-файл. Дальше:
+Открой `my-game` в Codex и напиши `$start`. Команды здесь — навыки:
+`$start`, `$status`, `$next`, `$verify`, `$retro`, `$help`.
+
+**Claude Code**:
+
+```bash
+node tools/new-project.mjs ../my-game --name "Моя игра" --host claude --git
+cd ../my-game
+```
+
+Открой `my-game` в Claude Code и напиши `/start`.
+
+`--host opencode` стоит по умолчанию. `--host` меняет только раскладку и способ
+вызова команд; правила, навыки, гейты и документы общие.
+
+| Хост | Части | Инструкции | Команды |
+|---|---|---|---|
+| OpenCode | `.opencode/` | `AGENTS.md` + `opencode.json` | `/start`, `/next`, … |
+| Codex | `.agents/` | `AGENTS.md` | `$start`, `$next`, … |
+| Claude Code | `.claude/` | `CLAUDE.md` + `AGENTS.md` | `/start`, `/next`, … |
+
+## Первый запуск
+
+`/start` (или `$start`) прочитает пять файлов, предложит режим и назовёт первый
+недостающий файл. Дальше:
 
 ```text
 /next      — одно следующее действие
@@ -35,6 +63,8 @@ cd ../my-game
 /verify    — запустить сборку/тесты и записать доказательство
 /retro     — короткое ретро после цикла или неудачи
 ```
+
+В Codex: `$next`, `$status`, `$verify`, `$retro`, `$help`.
 
 ## Как идёт работа
 
@@ -52,9 +82,12 @@ cd ../my-game
 ## Что установлено
 
 `new-project` по умолчанию ставит `core` и `game`: 10 правил, 4 агента,
-13 навыков, 3 гейта + 2 чекпоинта, 12 eval-спецификаций, 10 инструментов
-и 6 команд. Фикстуры eval не поставляются: `eval` честно падает, пока
-проверок нет.
+13 навыков, 3 гейта + 2 чекпоинта, 12 eval-спецификаций и 6 команд. В игру
+копируются `tools/verify.mjs` и `tools/status.mjs`; остальные инструменты
+запускаются из каркаса. В Codex шесть команд добавляются как навыки, поэтому
+частей на шесть больше.
+
+Фикстуры eval не поставляются: `eval` честно падает, пока проверок нет.
 
 Движки и доменные паки лежат в `library/`:
 
@@ -75,14 +108,17 @@ v0.3 **не создаёт запускаемый проект**: в шабло�
 
 ```bash
 node tools/verify.mjs ../my-game
-node tools/doctor.mjs ../my-game --strict
+node tools/doctor.mjs ../my-game
 node tools/upgrade.mjs ../my-game --dry-run
 ```
 
-`doctor` ничего не меняет. `upgrade --apply` пишет отчёт
-`docs/UPGRADE-<from>-to-<to>.md`, но в v0.3 перезаписывает изменённые части
-без трёхстороннего слияния. Перед `--apply` сделай коммит или backup; не
-применяй его к правилам и навыкам, которые ты правил вручную.
+`doctor` ничего не меняет и понимает OpenCode, Codex и Claude Code. На свежем
+проекте пустой `verify.recipe` — ожидаемое предупреждение; `--strict` включай
+после выбора движка, когда предупреждений быть не должно.
+`upgrade --apply` пишет отчёт `docs/UPGRADE-<from>-to-<to>.md`, но в v0.3
+перезаписывает изменённые части без трёхстороннего слияния. Перед `--apply`
+сделай коммит или backup; не применяй его к правилам и навыкам, которые ты
+правил вручную. `sync-agent` и `upgrade` пока OpenCode-first.
 
 ## Чего не делать
 
@@ -95,7 +131,9 @@ node tools/upgrade.mjs ../my-game --dry-run
 
 ## Где смотреть
 
+- `GUIDE.ru.md` — пошаговое начало проекта.
 - `README.md` — полное описание.
+- `hosts/README.md` — различия трёх хостов.
 - `docs/V0.3-BLUEPRINT.md` — что есть и почему.
 - `docs/BUILD-PLAN.md` — все части и статусы.
 - `docs/build/<ID>/` — обоснование, источники и отчёт по каждой части.
