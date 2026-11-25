@@ -70,3 +70,8 @@ Review loop: up to 3 rounds per part. A part is accepted only after it passes
 | SL05 | producer | ses_debb2e1b5ffeSBGn67Qti0RCkd | accepted 2026-11-25 |
 | SL06 | producer | ses_debb2e1b4ffeCEWiYniIiQ6wTc | accepted 2026-11-25 |
 | D01 | game-designer | ses_debb2e1b3ffehUa1rl2J2FkY2X | accepted 2026-11-25 |
+| D02 | producer | ses_deba3f4f0ffe2Kd6uKDn0wAaav | running |
+| D03 | producer | ses_deba3f4eeffe26MbbyL1M1BuFz | running |
+| D04 | game-designer | ses_deba3f4e7ffe8Xs8PX4mrn8wTZ | running |
+| D05 | producer | ses_deba3f4e6ffedGYm0FD2GxO9o6 | running |
+| D06 | lead-programmer | ses_deba3f4e5ffeJFzHJqOz2nNxe4 | running |
