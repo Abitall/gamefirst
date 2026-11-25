@@ -37,6 +37,11 @@
 | G0 | game-designer | ses_dec31f3ceffewpfNQaRn4RyaEB | accepted 2026-11-25 |
 | G1 | creative-director | ses_dec31f3cdffev3YZWfUf2iIzMp | accepted 2026-11-25 |
 | G2 | producer | ses_dec31f3ccffeCPwaoBV8FxbeKC | accepted 2026-11-25 |
+| G2.5 | producer | ses_dec1c2cedffezhZ0JCouNPoBo5 | running |
+| G3 | release-manager | ses_dec1c2cecffe9pJ8HXqqDlnful | running |
+| E01 | lead-programmer | ses_dec1c2ce6ffe3lumngAwt2FZXH | running |
+| E02 | technical-director | ses_dec1c2ce5ffeH6C23Kr8zdXZ4P | running |
+| E04 | qa-lead | ses_dec1c2ce4ffeNgBPuDKXRooYYy | running |
 
 Review loop: up to 3 rounds per part. A part is accepted only after it passes
 `docs/REVIEW-RUBRIC.md` and its `JUSTIFICATION.md` and `SOURCES.md` are complete.

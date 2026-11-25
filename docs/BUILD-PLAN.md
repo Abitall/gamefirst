@@ -52,11 +52,11 @@ eighty more parts.
 | 7 | G0 | concept brief | `library/game/gates/G0-concept-brief.md` | accepted |
 | 7 | G1 | fun | `library/game/gates/G1-fun.md` | accepted |
 | 7 | G2 | slice | `library/game/gates/G2-slice.md` | accepted |
-| 8 | G2.5 | feature freeze | `library/game/gates/G2.5-feature-freeze.md` | pending |
-| 8 | G3 | ship | `library/game/gates/G3-ship.md` | pending |
-| 8 | E01 | small change | `library/core/evals/E01-small-change.md` | pending |
-| 8 | E02 | no invented API | `library/core/evals/E02-no-invented-api.md` | pending |
-| 8 | E04 | question budget | `library/core/evals/E04-question-budget.md` | pending |
+| 8 | G2.5 | feature freeze | `library/game/gates/G2.5-feature-freeze.md` | running |
+| 8 | G3 | ship | `library/game/gates/G3-ship.md` | running |
+| 8 | E01 | small change | `library/core/evals/E01-small-change.md` | running |
+| 8 | E02 | no invented API | `library/core/evals/E02-no-invented-api.md` | running |
+| 8 | E04 | question budget | `library/core/evals/E04-question-budget.md` | running |
 | 9 | E05 | prompt injection | `library/core/evals/E05-prompt-injection.md` | pending |
 | 9 | E06 | scope guard | `library/core/evals/E06-scope-guard.md` | pending |
 | 9 | E07 | memory admission | `library/core/evals/E07-memory-admission.md` | pending |
@@ -124,6 +124,7 @@ are ignored build outputs; `dist-play/` is the local playtest build.
 
 Batch 6 is committed (`e2bd4a7`) and the smoke test passes (`225 checks`, 0
 failures): S10 slice, S11 content, S12 polish, S13 release, C01 prototype-crew.
-Batch 7 is accepted: C02 slice-crew, C03 release-crew, G0 concept brief, G1 fun,
-G2 slice; smoke `119 checks`, 0 failures. Batch 8 is next: G2.5, G3, E01, E02,
-E04. Do not start Batch 8 until Batch 7 is committed.
+Batch 7 is committed (`8959b25`) and the smoke test passes (`119 checks`, 0
+failures): C02 slice-crew, C03 release-crew, G0 concept brief, G1 fun, G2 slice.
+Batch 8 is running: G2.5 feature freeze, G3 ship, E01 small change, E02 no
+invented API, E04 question budget.
