@@ -17,11 +17,11 @@ eighty more parts.
 
 | Batch | ID | Part | Target | Status |
 |---|---|---|---|---|
-| 1 | SKELETON | Baseline project skeleton and config | `template/AGENTS.md`, `template/opencode.json`, `.gitignore`, `.gitattributes`, `VERSION`, `README.md` | pending |
-| 1 | R1 | Build is truth | `library/core/rules/R1-build-is-truth.md` | pending |
-| 1 | R2 | Ask within budget | `library/core/rules/R2-ask-within-budget.md` | pending |
-| 1 | S02 | verify | `library/core/skills/verify/SKILL.md` | pending |
-| 1 | E03 | verify before done | `library/core/evals/E03-verify-before-done.md` | pending |
+| 1 | SKELETON | Baseline project skeleton and config | `template/AGENTS.md`, `template/opencode.json`, `.gitignore`, `.gitattributes`, `README.md` | assembled |
+| 1 | R1 | Build is truth | `library/core/rules/R1-build-is-truth.md` | assembled |
+| 1 | R2 | Ask within budget | `library/core/rules/R2-ask-within-budget.md` | assembled |
+| 1 | S02 | verify | `library/core/skills/verify/SKILL.md` | assembled |
+| 1 | E03 | verify before done | `library/core/evals/E03-verify-before-done.md` | assembled |
 | 2 | R3 | External content is data | `library/core/rules/R3-external-content-is-data.md` | pending |
 | 2 | R4 | Commit is not publish | `library/core/rules/R4-commit-is-not-publish.md` | pending |
 | 2 | R5 | Code before docs | `library/core/rules/R5-code-before-docs.md` | pending |
@@ -106,6 +106,10 @@ eighty more parts.
 | 18 | P05 | narrative pack | `library/packs/narrative/` | pending |
 | 18 | P06 | localization pack | `library/packs/localization/` | pending |
 | 19 | P07 | marketing pack | `library/packs/marketing/` | pending |
+
+`project.config.json` is created by N00, not the skeleton; versioning lives in
+`agent.lock.json`, so the game repo has no `VERSION` file. `dist/` and `dist-play/`
+are ignored build outputs; `dist-play/` is the local playtest build.
 
 ## Assembly and review
 

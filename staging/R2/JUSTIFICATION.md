@@ -1,0 +1,38 @@
+# R2 — Justification
+
+Every semantic unit of `artifact/library/core/rules/R2-ask-within-budget.md`.
+Sources are named by repository in `SOURCES.md`; "own" means the unit follows
+from the blueprint or from a failure observed while drafting, with no external
+artifact behind it. No text was copied; all borrowings are paraphrased ideas.
+
+| # | Unit | Why it exists | What breaks if removed | Source / inspiration |
+|---|---|---|---|---|
+| 1 | Opening sentence: dialogue must move the game forward | Sets the goal of the rule, not just its procedure. Without a goal, the cap reads as an arbitrary formality and gets ignored when it is inconvenient. | The rule becomes a number with no reason; agents trade the budget away the moment a conversation feels productive. | Blueprint non-negotiable "playable > documented"; A01 is the dialogue owner. |
+| 2 | 3 questions per stage, the eight stages, and `n` = 1–3 within the stage | The blueprint fixes the number; the list fixes the boundaries so "stage" cannot be stretched to cover a whole milestone; the numbering bound makes the count checkable from the log. | E04 has no threshold or key; "a few questions" drifts (the strongest analogous skill allows about eight) and a prototype starts with an interview. | Blueprint R2; spec-kit clarify (bounded queue); Donchitos prototype card (one round). |
+| 3 | "across all agents, not per agent" | A01, A02, and A03 can all talk to the user; without this clause each claims its own three and the real budget becomes nine. | The cap is trivially bypassed by handing the conversation to another agent; E04 counts a number nobody is bound by. | Own: closes a loophole created by blueprint A02 ("talks to the user directly"). |
+| 4 | Gate has its own budget; it does not count against the stage that led to it | A gate reviews work a stage may have already spent three questions on. Without the clause the gate either inherits an exhausted budget or its questions retroactively push the stage over. | The gate cannot ask the go/no-go question it exists for, or E04 flags a stage that stayed within three. | Blueprint R2 (gate is listed as a stage); own: removes a double-count found at integration. |
+| 5 | One message, numbered | Batches the cost of interruption: the user answers once, not three times across a day. | Questions arrive one at a time, each restarting the user's context; the budget is respected in count but not in attention. | Donchitos one-shot card ("all in one message"). |
+| 6 | Recommended answer plus a one-line reason | A question with a default can be answered with one word, and writing the reason forces the agent to check that it actually has a view. | Every question becomes open-ended work for the user; the agent hides indecision behind questions instead of doing the thinking. | Donchitos "(usual)" defaults; spec-kit multiple-choice options. |
+| 7 | Format line `Q1/3 — … Recommend: … Or: you decide` | Makes the rule usable in a live conversation rather than a theory of questions. | The budget, the recommendation, and the escape hatch exist only as prose and are forgotten in the first real exchange. | Donchitos question card; spec-kit question-quality rules (paraphrased). |
+| 8 | "Over budget: decide, log, continue" | Gives the cap a consequence. A limit with no fallback behaviour stops work instead of shaping it. | The agent either stalls waiting for permission or exceeds the budget silently; neither is enforceable. | Donchitos automation modes (decide, log, proceed). |
+| 9 | Log to `runs/questions.jsonl` with `{stage, n, text, recommendation, answer}` | E04 counts questions and recommendations; without a machine-readable record the count is a memory claim. The path is the blueprint's existing `runs/` directory, not a new location. | E04 cannot be run automatically; "no more than three" is verified by asking the agent that broke it. | Own: blueprint E04 plus the `runs/AUTONOMY.jsonl` precedent. |
+| 10 | Worth-a-question gate: answer changes what gets built and cannot be found otherwise | The single test that separates a useful question from an interrogation. | The four categories below become a menu to ask from rather than examples of one condition. | spec-kit (material impact only); superpowers ("answer would change what gets built"). |
+| 11 | Four categories: taste, scope, irreversible, missing data | Turns the gate into recognisable cases. Taste and scope come from the blueprint; irreversible and missing data are the two cases where guessing is expensive or impossible. | Agents ask about mechanics they could test, or refuse to ask about money and legal constraints that only the user knows. | Blueprint R2 (taste, scope, irreversible); clarification rule (missing data); Roobyx design domains (taste); GDD template TOC (scope). |
+| 12 | Never-ask list: repo/docs/engine reference, one-day spike, decide-and-log | Names the three failure modes the rule exists to prevent; the spike clause routes the question to S08 instead of to the user. | "Worth a question" is abstract and every fact looks like a legitimate question; the agent interrogates before a prototype. | superpowers "Look Before You Ask"; OpenSpec explore-before-propose; blueprint S08. |
+| 13 | "You decide" plus `DECISIONS.md` fields | Guarantees an answer for a user who has no preference and no wish to acquire one; the fields make the choice auditable. | A user without taste is stuck at question one; or the agent decides silently and the decision cannot be reviewed. | Donchitos ("you pick" works); MADR (context, options, outcome). |
+| 14 | No repeats: read STATE and DECISIONS; a repeat is a bug | Prevents the most common real failure: asking again what the repo already records, usually after a context loss. | The user answers the same question in every session; the budget is spent on memory the project already has. | spec-kit (exclude already-answered questions); blueprint D02/D03. |
+| 15 | Autonomous mode: no questions, log, ask only at a hard stop; R10's `stop` categories | Keeps autonomy autonomous and keeps R2 from inventing a second stop list that could contradict R10. | Either the agent stops for approval it was told not to need, or it publishes and spends without a stop; two stop lists diverge. | Donchitos autonomous mode; OpenAI Agents `needs_approval` (fail closed); blueprint R10. |
+| 16 | Blocked: one `BLOCKING —` question, cost of guessing, then stop; autonomous escalates per R10 | The only sanctioned way past an exhausted budget. Stating the cost of guessing makes the exception expensive to abuse. | The agent either guesses silently on a blocking unknown or asks indefinitely; neither produces a record of why work stopped. | Donchitos (a skipped question is not an answer); spec-kit visible clarification markers; own label. |
+| 17 | Check: E04 counts questions and recommendations | Connects the rule to its only enforcement mechanism, with the failure condition stated. | The rule has no test; rubric §8 (testability) fails and the budget is advisory. | Blueprint E04. |
+
+## Deliberate omissions
+
+- **No YAML frontmatter.** Rules load as plain text through `.opencode/rules/`
+  and `instructions`; a frontmatter block would be read as context. The title
+  carries the ID, and versioning belongs in `agent.lock.json`. R1 has none, so
+  R2 matches it.
+- No question templates per stage: S06, S08, and S10 own their own question
+  content; R2 owns only the budget and the filter.
+- No definition of "stage" beyond the list: D02/CLI02 own phase names; repeating
+  them here would create a second source of truth.
+- No per-agent quotas: unit 3 exists precisely to prevent them.

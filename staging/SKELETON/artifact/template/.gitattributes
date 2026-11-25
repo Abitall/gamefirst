@@ -1,0 +1,20 @@
+# Normalize text to LF on checkout so Windows and CI see the same bytes.
+* text=auto eol=lf
+
+# Binary assets: no EOL conversion, no text diff, no merge.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ogg binary
+*.mp3 binary
+*.wav binary
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+*.mp4 binary
+*.webm binary
+*.aseprite binary
+*.ase binary
