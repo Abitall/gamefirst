@@ -14,7 +14,7 @@
 
 ## Review changes
 
-- **C02.** Artifact accepted unchanged. The subagent hit the step limit twice with only the artifact written; `JUSTIFICATION.md`, `SOURCES.md`, and `REPORT.md` were completed in the repair. The justification has 34 units and 11 omissions; sources are 4/3/2. Provenance is 8/9: exact quotes from the subagent's research were not carried into the repair, and the report says so instead of inventing them.
+- **C02.** Artifact accepted unchanged. The subagent hit the step limit twice with only the artifact written; `JUSTIFICATION.md`, `SOURCES.md`, and `REPORT.md` were completed in the repair and later replaced with the subagent's full versions, including quotes. The justification has 34 units and 11 omissions; sources are 4/3/2. Evidence is 8/9: Veloren has 21 stars, the polygons repo is stale, and Unity open-project-1 is archived; the report records these instead of hiding them.
 - **C03.** Accepted with notes. `butler` (1,012★) and `kubernetes/sig-release` (644★) are below the 1k comfort line; both are justified for artifact shape, not popularity. “All four, or no crew” is read as four input groups, not four items. The 72-hour watch is assigned to a named human after the crew disbands.
 - **G0.** Accepted. It is explicitly not a gate; it turns S06 into one page and a go/revise decision. One-page limit and D01 routing stay open.
 - **G1.** Accepted after three semantic fixes: `Four artifacts:` (success criteria are written before the build, not in the same session), `The human decides` (not the developer), and `keep — proceed to the slice (S10)` (the old line sent the project back to the core loop it had just judged). Final 429.5.
@@ -38,7 +38,7 @@
 
 ## Open issues
 
-1. C02 source quotes were not captured; the artifact is accepted, the provenance gap is recorded.
+1. C02 evidence quality: Veloren has 21 stars, the polygons repo is stale, and Unity open-project-1 is archived; quotes are present but the source pool is weaker than C03's.
 2. C03 “All four, or no crew” is editorial; four input groups are intended.
 3. G1 leaves open who signs when an external tester, not the user, gives the verdict.
 4. D07 is still a blueprint ID; S09/S10/C02 cite it. Batch 8 does not create it.

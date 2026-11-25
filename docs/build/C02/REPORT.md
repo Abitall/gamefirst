@@ -1,52 +1,98 @@
-# C02 — report
+# C02 Report — slice-crew
 
 ## Summary
 
-`slice-crew.md` defines the temporary crew that carries a kept core loop through the nine-point slice to a G2 decision. It has four roles, five entry inputs, six work steps, one packet, and a hard disband. The artifact is unchanged from the subagent's accepted revision: 2,545 characters, 460 words, 35 content lines, 636.25 tokens at chars/4.
+`slice-crew.md` defines the temporary crew that turns a G1 keep into a G2
+decision. It is a plain-Markdown game-layer crew: partner (A01) leads,
+designer (A02) owns the slice question and the nine-point DoD, engineer (A03)
+builds and verifies, critic (A04) reviews blind after the build and note are
+closed. The crew reuses content, runs three to five stranger sessions, and
+hands the human a self-contained packet with proceed/fix/pivot options. It
+disbands after the line is written to `DECISIONS.md` and `STATE.md`. Content,
+polish, release, and new systems are excluded and redirected.
 
-## Files
+Structure: Trigger, Members, Input (five-input gate), Work (six steps), Output
+(packet and decision), Limits. The artifact is frozen at the version below.
 
-| File | Size |
-|---|---|
-| `artifact/library/game/crews/slice-crew.md` | 2,545 chars / 636.25 chars/4 / 621 words×1.35 / 35 content lines |
-| `JUSTIFICATION.md` | 34 units + 11 omissions + 3 known tensions |
-| `SOURCES.md` | 9 repos, 4/3/2, borrow/reject per source |
-| `REPORT.md` | this file |
+## Size
+
+| Measure | Value |
+|---------|-------|
+| Characters | 2,545 |
+| chars/4 (token estimate) | 636.3 |
+| Words | 460 |
+| Lines | 35 |
+| Limit | 700 (task limit; crews have no rubric threshold) |
+| Headroom | 63.7 chars/4 (9.1%) |
+| SHA-256 | `22162dbd89a62022ecc27799ff2a6fc0e285bc055e85ea5d1ad62afcb527c009` |
+
+The 700 limit is the task's; the rubric lists thresholds for rules, skills,
+packs, agents, evals, commands, and templates, not crews. At 636.3 the artifact
+sits in the 620-680 target band.
 
 ## Checks
 
-1. **Trigger.** G1 keep line and a loop that plays start to finish; no crew otherwise. PASS.
-2. **Members.** A01 lead, A02 design, A03 build, A04 blind critic; no extra role. PASS.
-3. **Inputs.** Five named inputs, “five or no crew”. PASS.
-4. **Work.** Checklist first; frame build; reuse; silent sessions; D07 note; blind review. PASS.
-5. **Output.** G2 packet with checklist evidence, D07, build, capture, questions with two options. PASS.
-6. **Decision.** Human `proceed`/`fix`/`pivot`; one fix round; A01 records; crew disbands. PASS.
-7. **Limits.** No publish/store, new ideas to BACKLOG, retune to S09, no separate report, R10 or stop. PASS.
-8. **Cross-refs.** S09, S10, R1, R4, R7, R8, R9, R10, G1, G2 all resolve or are blueprint IDs. PASS.
-9. **Size.** 636.25 chars/4, inside 620–680 and under 700. PASS.
+| Check | Result |
+|-------|--------|
+| Plain Markdown, no YAML frontmatter | pass |
+| UTF-8 without BOM (first bytes are `# s`, not `EF BB BF`) | pass |
+| LF only; no CR or CRLF | pass |
+| Trailing newline; 35 lines | pass |
+| ASCII only; no mojibake | pass |
+| All 14 cross-references resolve: S10, A01, A02, A03, A04, G1, G2, R1, R7, R8, R9, R10, E03, D07 | 14/14 |
+| 34 semantic units, each mapped in `JUSTIFICATION.md` | 34/34 |
+| 11 deliberate omissions recorded | 11/11 |
+| Nine sources, 4 gamedev / 3 software / 2 AI-agent | 9 (4/3/2) |
+| Every source has URL, stars, license, artifact, quote, borrow, reject | 9/9 |
+| No copied code, license text, or asset | pass |
+| No secrets, tokens, personal data, URLs, or commands in the artifact | pass |
+| No engine, OS, or editor assumption | pass |
+| No writes outside `staging/C02/` | pass |
+| Artifact hash unchanged after freeze | pass (above) |
 
-## Rubric
+## Rubric self-check (9/9)
 
-| # | Criterion | Verdict | Evidence |
-|---|---|---|---|
-| 1 | Necessary every line | PASS | 34 units; no duplicate sentence |
-| 2 | No invented facts | PASS | Roles, inputs, packet, limits align with S10/G1/G2/R7/R8/R9/R10 |
-| 3 | Sources | CONCERN | 9 repos, 4/3/2; verbatim quotes not carried into the manual repair |
-| 4 | Size | PASS | 636.25 chars/4; 621 words×1.35 |
-| 5 | Trigger/failure edges | PASS | Missing input = no crew; no stranger = no packet |
-| 6 | Integration | PASS | A01/A02/A03/A04, S09, S10, D07, G2 |
-| 7 | Non-duplication | PASS | S10 owns the nine points; C02 only names count and order |
-| 8 | Language | PASS | English artifact, POSIX paths |
-| 9 | Encoding | PASS | UTF-8 no BOM, LF, no tabs/trailing spaces |
+| # | Section | Verdict | Note |
+|---|---------|---------|------|
+| 1 | Necessity | pass | 34 units; each has why, what breaks, a "shorter?" answer, and a source. Eleven omissions are named. |
+| 2 | Function | pass | Trigger (G1 keep + playable loop), input (five or no crew), output (packet + decision), done (line in `DECISIONS.md`, crew disbands), failure (no stranger no packet; R10 or stop), scope (four exclusions). |
+| 3 | Evidence | concerns | Nine repos and the 4/3/2 split are correct, but `veloren/book` has 21 stars and `polygons`/`open-project-1` are not current (2022 / archived). The set is the one specified for this part; every weakness is disclosed in `SOURCES.md`. |
+| 4 | Fit with the blueprint | pass | Game layer; no engine imports; IDs and paths from the blueprint; no contradiction found with S10, A01-A04, G1/G2, R1, R7-R10, E03, D07. |
+| 5 | Size | pass | 636.3 chars/4 against a 700 task limit; 63.7 headroom. |
+| 6 | Language and encoding | pass | English artifact; UTF-8 no BOM; LF; ASCII; no file paths inside the artifact, so POSIX path rules do not bite. |
+| 7 | Security | pass | External content treated as data; licenses checked; no code copied; no publish, spend, or network write. |
+| 8 | Testability | pass | S10 checklist, R8 playtest, E03 verify, and the packet's evidence-per-point are the checks; a failed point is reported as failed. |
+| 9 | Integration | pass | File name and IDs stable; 14/14 refs; loads alone; no engine/OS/editor assumption. |
 
-**Score: 8/9.** The lost point is provenance, not artifact quality: the subagent's exact source quotes were not written before the step limit, and this repair records borrow/reject without claiming quotation.
+Result: 9/9 sections checked; 8 pass, 1 concern. The concern is disclosed, not
+silent; the reviewer decides whether it is acceptable.
 
 ## Open questions
 
-1. “Settings” is in the frame list but not in the nine DoD points; treat as menu sub-item, not a tenth check.
-2. A02 writes the D07 note, A01 runs sessions; the split is deliberate but should be reflected in A02's playtests permission.
-3. A G2 `fix` is one round for named points only; a pivot ends the crew.
-4. The crew artifact is copied to `library/game/crews/` only after acceptance.
+1. **Evidence bar.** `veloren/book` (21 stars) and the stale `polygons` /
+   archived `open-project-1` are below "popular and current". They are the
+   specified set and each supplies an artifact the others do not. Replace them
+   with current repos, or keep the set with the disclosure?
+2. **Fix round bound.** "One round" has no time limit; A01's clock is the only
+   bound. Should R9 add a date to the fix round?
+3. **No separate report.** C01 ships a crew `REPORT.md`; C02 says the packet is
+   the record. Confirm that a packet-only record is intended for this part.
+4. **Who runs the sessions.** A01 runs the stranger sessions and owns the gate
+   line. This reads as compatible with R8 (A01 is not the builder), but it puts
+   collection and reporting in one role.
+5. **Pivot exit.** A pivot ends the crew. If the human wants a different slice
+   after a pivot, that is a new crew and a new five-input gate; confirm.
+6. **Nine-point coverage in Work 2.** Work 2 lists the frame A03 builds; the
+   stranger check and reuse sit in Work 4 and Work 3, and pause/restart sit
+   under "title and menu". The checklist (Work 1) binds to S10, so the DoD is
+   complete. Confirm that pause/restart need no separate build line.
+
+## Promotion note
+
+`docs/build/C02/` still holds earlier copies (the 7,511-byte
+`JUSTIFICATION.md`, a 2,918-byte `REPORT.md`, and an older `SOURCES.md`); the
+staging files are authoritative. Overwrite the build copies at promotion or the
+versions will diverge.
 
 ## Review
 

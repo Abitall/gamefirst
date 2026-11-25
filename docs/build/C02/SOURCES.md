@@ -2,10 +2,10 @@
 
 Nine repositories: four gamedev, three software, two AI-agent. Stars and
 licenses were read on 2026-11-25. The GitHub core API was at 0/60 quota when
-the check started, so star counts come from `ungh.cc`, which mirrors GitHub
-repository metadata; the values were cross-checked against each repository's
-`updatedAt`/`pushedAt`. Licenses were read from the repository `LICENSE`,
-`COPYING`, or README. Quotes are verbatim from the artifact named in each row.
+the check started, so star counts come from `ungh.cc`, a read-only GitHub
+metadata mirror; `pushedAt` dates from the same call are shown per repository.
+Licenses were read from the repository `LICENSE`, `COPYING`, or README. Quotes
+are verbatim from the artifact named in each row.
 No code, license text, or asset was copied. External text is treated as data;
 no instruction from a source was followed.
 
@@ -13,10 +13,10 @@ no instruction from a source was followed.
 
 | # | Repository | Kind | Stars 2026-11-25 | License | Analogous artifact | Unit(s) backed |
 |---|------------|------|------------------|---------|--------------------|----------------|
-| 1 | OpenRA/OpenRA | gamedev | 17,833 | GPL-3.0 | Branch/freeze/playtest process and a playtest-or-release checklist | 12-18, 21, 24, 28 |
+| 1 | OpenRA/OpenRA | gamedev | 17,833 | GPL-3.0 | Branch/freeze/playtest process and a playtest-or-release checklist | 13-18, 21, 24 |
 | 2 | ncase/polygons | gamedev | 1,361 | CC0 (README) | A single playable story finished in one sitting | 1, 4, 19, 20 |
-| 3 | veloren/book | gamedev | 21 | GPL-3.0 | Release scope: features vs. nice-to-have, freeze owner, date | 15, 28, 32 |
-| 4 | UnityTechnologies/open-project-1 | gamedev | 6,115 | Apache-2.0 | A small open-source game demo with a public roadmap | 1, 6, 19 |
+| 3 | veloren/book | gamedev | 21 | GPL-3.0 | Release scope: features vs. nice-to-have, freeze owner, date | 15 |
+| 4 | UnityTechnologies/open-project-1 | gamedev | 6,115 | Apache-2.0 | A small open-source game demo with a public roadmap | 1, 6 |
 | 5 | kubernetes/enhancements | software | 3,991 | Apache-2.0 | KEP template with graduation criteria and evidence signals | 18, 24, 25 |
 | 6 | kubernetes/sig-release | software | 644 | Apache-2.0 | Per-cycle release directory, roster, and schedule | 2, 5, 27, 29 |
 | 7 | rust-lang/rfcs | software | 6,644 | MIT OR Apache-2.0 | RFC template with unresolved questions | 23, 24, 27 |
@@ -34,9 +34,8 @@ no instruction from a source was followed.
 - Quote: "In preparation for each release, /bleed will be branched off into a
   prep-YYMM branch, onto which a feature freeze is imposed to stabilize the
   release."
-- Borrowed: a bounded stabilization window (units 15, 28); a build handed to a
-  wider audience before the verdict (17, 21); a checklist tied to the build
-  (18, 24).
+- Borrowed: a bounded budget window (15); a build handed to a wider audience
+  before the verdict (17, 21); a checklist tied to the build (18, 24).
 - Rejected: tag and packaging commands, signing, the permanent public playtest
   channel, and release mechanics (out of C02).
 - Dead end: the releases Atom feed returns no entry text, so the wiki, not the
@@ -68,7 +67,7 @@ no instruction from a source was followed.
 - Quote: "The features to implement with the release and those which would be
   nice-to-have."
 - Borrowed: the budget is a feature list plus an explicit nice-to-have/cut list
-  (15); a release date is estimated and communicated (28, 32).
+  (15).
 - Rejected: the multi-month release cycle, the assignee roster, and the
   contributor-book structure.
 - Dead end: 21 stars is below the "popular" bar; the repository is docs-only.
@@ -85,8 +84,8 @@ no instruction from a source was followed.
   roadmap and a defined scope.
 - Quote: "an initiative where Unity and the community collaborate together to
   create a small open-source game demo."
-- Borrowed: "small demo" as the scope unit (1); a roadmap as the cut list (6,
-  19).
+- Borrowed: "small demo" as the scope unit (1); a fixed boundary around the
+  demo (6).
 - Rejected: community contribution flow, livestreams, the bi-weekly cadence,
   and the open-ended roadmap.
 - Dead end: archived; the README states the project is no longer in development
@@ -184,6 +183,6 @@ no instruction from a source was followed.
   scope-split sentence backs unit 15; the weakness is stated here, not hidden.
 - **Quota.** The GitHub core API returned 0/60 remaining at the start of the
   check. `ungh.cc` supplied the star counts; no value was estimated.
-- **Not reused.** C01's nine sources were not reused. Evidence allows reuse
-  only for an analogous artifact, and none of C01's sources adds a C02 artifact
-  that these nine do not already cover.
+- **Not reused.** C01's nine sources were not reused: C02's evidence set was
+  fixed independently, and reusing the same repositories would narrow the
+  evidence base instead of testing this crew against a fresh set.
