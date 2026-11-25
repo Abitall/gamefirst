@@ -1,6 +1,6 @@
 # A01 partner — justification
 
-Unit-by-unit account of `artifact/library/core/agents/partner.md` (55 lines, 2551 chars). Line numbers refer to that file. Sources are named by ID only where the text already lives elsewhere: the blueprint, the rules, the rubric, the OpenCode agent documentation, and `SOURCES.md` (G1–A2).
+Unit-by-unit account of `artifact/library/core/agents/partner.md` (58 lines, 2616 chars). Line numbers refer to that file. Sources are named by ID only where the text already lives elsewhere: the blueprint, the rules, the rubric, the OpenCode agent documentation, and `SOURCES.md` (G1–A2).
 
 ## Frontmatter
 
@@ -73,3 +73,9 @@ Unit-by-unit account of `artifact/library/core/agents/partner.md` (55 lines, 255
 | report format | 55 |
 
 Size: 637.8 tokens by chars/4 (limit 700, target 600–660); 540.0 by words×1.35.
+
+## Post-review integration
+
+| Unit | Why | If removed | Source |
+|---|---|---|---|
+| edit docs/retro/** allow | SL05 writes one dated retro file; A01 owns the file. | The write becomes an sk on the stage-close path, or the command cannot persist the result. | SL05, S03, D02 |

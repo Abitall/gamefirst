@@ -65,8 +65,8 @@
 
 Review loop: up to 3 rounds per part. A part is accepted only after it passes
 `docs/REVIEW-RUBRIC.md` and its `JUSTIFICATION.md` and `SOURCES.md` are complete.
-| SL03 | producer | ses_debb2e1bfffeDtDAvl6k2ZJHbr | running |
-| SL04 | qa-lead | ses_debb2e1bdffetDminDSYZf477H | running |
-| SL05 | producer | ses_debb2e1b5ffeSBGn67Qti0RCkd | running |
-| SL06 | producer | ses_debb2e1b4ffeCEWiYniIiQ6wTc | running |
-| D01 | game-designer | ses_debb2e1b3ffehUa1rl2J2FkY2X | running |
+| SL03 | producer | ses_debb2e1bfffeDtDAvl6k2ZJHbr | accepted 2026-11-25 |
+| SL04 | qa-lead | ses_debb2e1bdffetDminDSYZf477H | accepted 2026-11-25 |
+| SL05 | producer | ses_debb2e1b5ffeSBGn67Qti0RCkd | accepted 2026-11-25 |
+| SL06 | producer | ses_debb2e1b4ffeCEWiYniIiQ6wTc | accepted 2026-11-25 |
+| D01 | game-designer | ses_debb2e1b3ffehUa1rl2J2FkY2X | accepted 2026-11-25 |

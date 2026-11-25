@@ -6,7 +6,7 @@
 
 | File | Status |
 |---|---|
-| `artifact/library/core/agents/partner.md` | written, 55 lines |
+| `artifact/library/core/agents/partner.md` | written, 58 lines |
 | `JUSTIFICATION.md` | 31 units + 6 omissions + brief coverage |
 | `SOURCES.md` | 9 repositories (4 gamedev / 3 software / 2 AI), 6 dead ends |
 | `REPORT.md` | this file |
@@ -17,13 +17,13 @@ Measured on the artifact after the last edit (bytes = chars, ASCII):
 
 | Metric | Value | Limit / target |
 |---|---|---|
-| Characters | 2551 | — |
-| Tokens by chars/4 | **637.8** | ≤700, target 600–660 |
-| Words | 400 | — |
+| Characters | 2616 | — |
+| Tokens by chars/4 | **654.0** | ≤700, target 600–660 |
+| Words | 407 | — |
 | Tokens by words×1.35 | 540.0 | reported for comparison |
-| Lines | 55 | — |
+| Lines | 58 | — |
 
-Both metrics are under 700; chars/4 sits inside the 600–660 target, 62 tokens under the ceiling. The first draft was 2584 chars / 646 tokens (chars/4); the factual fix to the language line removed the surplus.
+Both metrics are under 700; chars/4 sits inside the 600–660 target, 46 tokens under the ceiling. The first draft was 2584 chars / 646 tokens (chars/4); the factual fix to the language line removed the surplus.
 
 ## Encoding and format
 
@@ -63,7 +63,7 @@ Kept:
 | 2 | Function | 7 | Trigger (session start / handoff), inputs (state, brief, request), output (state update, route, gate line, report) and failure (absent user, blocked) are present. The "done" condition is implied by the report slots, not stated as one sentence. |
 | 3 | Evidence | 8 | 31 justification units with breaks-if-removed, 9 verifiable sources with stars and quotes, 6 dead ends. Weak point: no eval tie-in. |
 | 4 | Fit | 9 | Matches blueprint A01 verbatim in scope; uses existing IDs only; defers every decision to A02/A03/A04/human. |
-| 5 | Size | 9 | 637.8 of 700 by the rubric metric; inside target band; no filler lines found on re-read. |
+| 5 | Size | 9 | 654.0 of 700 by the rubric metric; inside target band; no filler lines found on re-read. |
 | 6 | Language and encoding | 9 | Bilingual rule explicit and complete; UTF-8 no BOM, LF, ASCII body, POSIX paths. |
 | 7 | Security | 9 | No shell widening, no publish path, `src/**` deny, secrets untouched; inheritance and resource base confirmed, so the omitted `shell` rule holds the global deny on publish. |
 | 8 | Testability | 5 | Behaviours are observable (one message with ≤3 questions, a gate line, an evidence path), but no eval targets A01. |
@@ -72,3 +72,7 @@ Kept:
 Self-verdict: **accept**; the permission semantics are confirmed against the documentation, so the only remaining condition is the later A01 eval that exercises the role end to end.
 
 Review: pending
+
+## Post-review integration
+
+SL05 writes docs/retro/<date>.md; A01 needed an explicit allow so the write does not become an sk on the critical path. Added edit docs/retro/** allow; artifact is now 2,616 chars / 654.0 tokens, 58 lines.

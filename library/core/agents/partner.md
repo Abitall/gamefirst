@@ -21,6 +21,9 @@ permissions:
     resource: "docs/playtests/**"
     effect: allow
   - action: edit
+    resource: "docs/retro/**"
+    effect: allow
+  - action: edit
     resource: "runs/**"
     effect: allow
   - action: edit
