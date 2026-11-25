@@ -155,6 +155,6 @@ CLI02 status. Batch 11 is committed (`98a3a78`) and the smoke test passes
 upgrade, CLI07 doctor. Batch 12 is committed (`9b44dec`) and the smoke test
 passes (`319 checks`, 0 failures): CLI08 lint-agent-context, CLI09
 trigger-check, CLI10 capture, SL01 `/start`, SL02 `/status`. Batch 13 is
-assembled and the smoke test passes (`366 checks`, 0 failures): SL03 `/next`,
-SL04 `/verify`, SL05 `/retro`, SL06 `/help`, D01 `BRIEF.md`. Batch 14 is
-running: D02-D06 document templates under the thin protocol.
+committed (`2eb984c`) and the smoke test passes (`366 checks`, 0 failures):
+SL03 `/next`, SL04 `/verify`, SL05 `/retro`, SL06 `/help`, D01 `BRIEF.md`.
+Batch 14 is running: D02-D06 document templates under the thin protocol.
